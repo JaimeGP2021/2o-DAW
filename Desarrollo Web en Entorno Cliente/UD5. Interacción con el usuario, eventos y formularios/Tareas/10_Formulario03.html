@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario 03</title>
+    <script defer src="10_Formulario03.js"></script>
+  </head>
+  <body>
+    <form
+      method="post"
+      action="mailto:jaime.garcia@iesdonana.org"
+      enctype="text/plain"
+    >
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Introduce tu nombre:</label>
+        <input type="text" name="nombre" id="nombre" />
+        <br />
+        <label for="mensaje">Mensaje:</label>
+        <br />
+        <textarea name="mensaje" id="mensaje" cols="60" rows="10"></textarea>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <label for="color">Elige un color:</label>
+      <br />
+      <input type="radio" name="color" id="color" value="rojo" /> Rojo
+      <br />
+      <input type="radio" name="color" id="color" value="verde" /> Verde
+      <br />
+      <input type="radio" name="color" id="color" value="azul" /> Azul
+      <br /><br />
+
+      <label for="asignatura">Selecciona una asignatura:</label>
+      <select name="asignatura" id="asignatura">
+        <option value="matematicas">Matemáticas</option>
+        <option value="lengua">Lengua</option>
+        <option value="biologia">Biología</option>
+      </select>
+      <br />
+      <br />
+
+      <label for="dia_disponible"
+        >Selecciona los días con disponibilidad:</label
+      >
+      <br />
+      <input
+        type="checkbox"
+        name="dia_disponible"
+        id="lunes"
+        value="lunes"
+        onclick="preferente('lunes')"
+      />
+      <label for="lunes">Lunes</label>
+      <br />
+      <input
+        type="checkbox"
+        name="dia_disponible"
+        id="martes"
+        value="martes"
+        onclick="preferente('martes')"
+      />
+      <label for="martes">Martes</label>
+      <br />
+      <input
+        type="checkbox"
+        name="dia_disponible"
+        id="miercoles"
+        value="miercoles"
+        onclick="preferente('miercoles')"
+      />
+      <label for="miercoles">Miércoles</label>
+      <br />
+      <input
+        type="checkbox"
+        name="dia_disponible"
+        id="jueves"
+        value="jueves"
+        onclick="preferente('jueves')"
+      />
+      <label for="jueves">Jueves</label>
+      <br />
+      <input
+        type="checkbox"
+        name="dia_disponible"
+        id="viernes"
+        value="viernes"
+        onclick="preferente('viernes')"
+      />
+      <label for="lunes">Viernes</label>
+      <br />
+      <br />
+
+      <label for="dia_preferente">Selecciona el día preferente:</label>
+      <select name="dia_preferente" id="dia_preferente">
+        <option value="lunes">Lunes</option>
+        <option value="martes">Martes</option>
+        <option value="miercoles">Miércoles</option>
+        <option value="jueves">Jueves</option>
+        <option value="viernes">Viernes</option>
+      </select>
+      <br /><br />
+      <button type="submit" id="enviar">
+        Haz clic para enviar información
+      </button>
+      <button type="reset">Comenzar a rellenar de nuevo</button>
+      <button type="button" id="google">Haz clic sobre mí</button>
+    </form>
+  </body>
+</html>

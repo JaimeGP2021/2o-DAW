@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <script src="7.js"></script>
+    <body>
+        <form action="mailto:Rafael.figueroa@iesdonana.org" method="post" id="formulario">
+            <fieldset>
+                <legend>DATOS PERSONALES DE ACCESO</legend>
+                <input type="text" name="nombre" id="nombre" pattern="^([A-Z][a-z]+)$" required placeholder="Nombre"><br>
+
+                <input type="text" name="ape" id="ape" pattern="^([A-Z][a-z]+)$" required placeholder="Apellido"><br>
+
+                <input type="text" name="age" id="age" pattern="^(0|\d{1,2}|1[0-1]\d|120)$" required placeholder="Edad"><br>
+                
+                <input type="password" name="dni" id="dni" pattern="^(\d{2}\.\d{3}\.\d{3}-[A-Z])$" required placeholder="DNI 99.999.999-x"><br>
+
+                <label for="sex">Sexo:</label>
+                <select name="sex" id="sex" required>
+                    <option value="mas">Masculino</option>
+                    <option value="fem">Femenino</option>
+                    <option value="otr">Otros</option>
+                </select><br>
+                
+                <label for="nac">Lugar de Nacimiento</label>
+                <input type="text" name="nac" id="nac" pattern="^([A-Z][a-z]{3,})$" required>
+            </fieldset>
+            <br>
+                <input type="submit" value="GUARDAR" id="submit">
+                <input type="button" id="ver" value="VER">
+        </form>
+    </body>
+    
+</html>

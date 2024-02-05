@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validar 01</title>
+    <script defer src="12_Validar_01.js"></script>
+    <style>
+      :is(input, text):invalid {
+        background: lightcoral;
+      }
+
+      :is(input, text):valid {
+        background: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post">
+      <label for="dni">DNI:</label>
+      <input
+        type="text"
+        name="dni"
+        id="dni"
+        class="entrada"
+        pattern="^(\d{2})\.(\d{3})\.(\d{3})-([A-Z]{1})$"
+      />
+      <br />
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        class="entrada"
+        pattern="^(\w+)\s(\w+)(\s?(\w+)?\s?(\w+)?)$"
+      />
+      <br />
+      <label for="FNac">F.Nac.:</label>
+      <input
+        type="text"
+        name="FNac"
+        id="FNac"
+        class="entrada"
+        pattern="^([0-3]{1}\d{1})\/(\d{2})\/(\d{4})$"
+      />
+      <br />
+      <label for="email">E-mail:</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        class="entrada"
+        pattern="^\w+\d*@\w+\.\w+$"
+      />
+      <br />
+      <label for="pagWeb">Pág. Web:</label>
+      <input
+        type="text"
+        name="pagWeb"
+        id="pagWeb"
+        class="entrada"
+        pattern="^http:\/\/\S+\.\S+\.\S+$"
+      />
+      <br />
+      <label for="contrasena">Contraseña:</label>
+      <input
+        type="text"
+        name="contrasena"
+        id="contrasena"
+        class="entrada"
+        pattern="^.{8,10}$"
+      />
+      <br />
+      <label for="confContrasena">Confirmar Contraseña:</label>
+      <input
+        type="text"
+        name="confContrasena"
+        id="confContrasena"
+        class="entrada"
+        pattern="^.{8,10}$"
+      />
+      <br />
+      <button type="button">GUARDAR</button>
+      <button type="button" id="ver">VER</button>
+    </form>
+  </body>
+</html>

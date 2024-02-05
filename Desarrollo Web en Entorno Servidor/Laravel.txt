@@ -1,0 +1,18 @@
+composer create-project laravel/laravel NOMBRE_PROYECTO
+te metes al directorio del proyecto
+npm install
+composer install
+composer require laravel/breeze --dev
+php artisan breeze:install
+sudo -u postgres createuser -P NOMBRE_USUARIO_DB
+sudo -u postgres createdb -O NOMBRE_DDBB NOMBRE_USUARIO_BBDD
+npm run dev
+php artisan serve
+code .
+editas .env con los datos de la bbdd
+Pruebas a conectarte con "php artisan db"
+F1 en code -> artisan make:model
+Nombre del modelo en singular y empezando en mayúscula (coomo una clase)
+Le dices que si quieres crear el resto de cosas
+Database->migrations->editas la migarcion del modelo creado para hacer la tabla de la BBDD
+php artisan migrate

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A18-Jaime</title>
+    <script defer src="U03-A18-Jaime.js"></script>
+
+</head>
+
+<body>
+    <table align="left" bgcolor="#F0F0F0" border="0">
+        <header>
+            <h1>CALCULADORA</h1>
+        </header>
+        <tr>
+            <td colspan="4"><input id="pantalla" type="text"></td>
+        </tr>
+        <tr>
+            <td> <button onclick="resuelve_complejo('√')">√</button> </td>
+            <td> <button onclick="resuelve_complejo('log')">log</button> </td>
+            <td> <button onclick="resuelve_complejo('π')">π</button> </td>
+            <td> <button onclick="resuelve_complejo('³')">x³</button> </td>
+        </tr>
+        <tr>
+            <td> <button onclick="resuelve_complejo('sin')">sin</button> </td>
+            <td> <button onclick="resuelve_complejo('cos')">cos</button> </td>
+            <td> <button onclick="resuelve_complejo('tan')">tan</button> </td>
+            <td> <button onclick="resuelve_complejo('²')">x²</button> </td>
+        </tr>
+        <tr>
+            <td> <button onclick="limpiar()">C</button> </td>
+            <td> <button onclick="ver('/')">/</button> </td>
+            <td> <button onclick="ver('*')">*</button> </td>
+            <td> <button onclick="del()">DEL</button> </td>
+        </tr>
+        <tr>
+            <td> <button onclick="ver('7')">7</button> </td>
+            <td> <button onclick="ver('8')">8</button> </td>
+            <td> <button onclick="ver('9')">9</button> </td>
+            <td> <button onclick="ver('-')">-</button> </td>
+        </tr>
+        <tr>
+            <td> <button onclick="ver('4')">4</button> </td>
+            <td> <button onclick="ver('5')">5</button> </td>
+            <td> <button onclick="ver('6')">6</button> </td>
+            <td> <button onclick="ver('+')">+</button> </td>
+        </tr>
+        <tr>
+            <td> <button onclick="ver('1')">1</button> </td>
+            <td> <button onclick="ver('2')">2</button> </td>
+            <td> <button onclick="ver('3')">3</button> </td>
+            <td rowspan="2"> <button onclick="resuelve()">=</button> </td>
+        </tr>
+        <tr>
+            <td> <button onclick="ver('0')">0</button> </td>
+            <td> </td>
+            <td> <button onclick="ver('.')">.</button> </td>
+            <td> </td>
+        </tr>
+    </table>
+</body>
+
+</html>

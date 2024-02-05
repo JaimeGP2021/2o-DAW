@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Votación</title>
+    <script src="11.js"></script>
+  </head>
+  <body>
+    <p>¿Que tipo de café te gusta más?</p>
+    <form action="">
+      <input type="radio" name="cafe" id="solo" class="opcion" />
+      <label for="solo">Café Solo</label>
+      <br />
+
+      <input type="radio" name="cafe" id="leche" class="opcion" />
+      <label for="leche">Café con leche</label>
+      <br />
+
+      <input type="radio" name="cafe" id="desc" class="opcion" />
+      <label for="desc">Café descafeinado</label>
+      <br />
+
+      <input type="radio" name="cafe" id="hielo" class="opcion" />
+      <label for="hielo">Café solo con hielo</label>
+      <br />
+      <br />
+
+      <button type="button" id="voto">Votar!</button>
+    </form>
+    <br /><br />
+
+    <progress id="pro_solo" max="0" value="0" class="barra"></progress>
+    <label for="pro_solo" id="label_solo">Café Solo</label>
+    <br />
+
+    <progress id="pro_leche" max="0" value="0" class="barra"></progress>
+    <label for="pro_leche" id="label_leche">Café con leche</label>
+    <br />
+
+    <progress id="pro_desc" max="0" value="0" class="barra"></progress>
+    <label for="pro_desc" id="label_desc">Café descafeinado</label>
+    <br />
+
+    <progress id="pro_hielo" max="0" value="0" class="barra"></progress>
+    <label for="pro_hielo" id="label_hielo">Café solo con hielo</label>
+    <br />
+  </body>
+</html>

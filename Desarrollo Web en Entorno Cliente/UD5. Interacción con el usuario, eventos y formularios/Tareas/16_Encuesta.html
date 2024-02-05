@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta</title>
+    <script defer src="16_Encuesta.js"></script>
+  </head>
+  <body>
+    <p>¿Qué sistema operativo te gusta más?</p>
+    <form action="">
+      <input type="radio" name="os" id="ios" class="opcion" />
+      <label for="os">iOS</label>
+      <br />
+
+      <input type="radio" name="os" id="android" class="opcion" />
+      <label for="android">Android</label>
+      <br />
+
+      <input type="radio" name="os" id="windows" class="opcion" />
+      <label for="windows">Windows Phone</label>
+      <br />
+
+      <input type="radio" name="os" id="otro" class="opcion" />
+      <label for="otro">Otro</label>
+      <br />
+      <br />
+
+      <button type="button" id="voto">Votar!</button>
+    </form>
+    <br /><br />
+    <progress id="pro_ios" max="0" value="0" class="barra"></progress>
+    <label for="pro_ios" id="label_ios">iOS</label>
+    <br />
+    <progress id="pro_android" max="0" value="0" class="barra"></progress>
+    <label for="pro_android" id="label_android">Android</label>
+    <br />
+    <progress id="pro_windows" max="0" value="0" class="barra"></progress>
+    <label for="pro_windows" id="label_windows">Windows</label>
+    <br />
+    <progress id="pro_otro" max="0" value="0" class="barra"></progress>
+    <label for="pro_otro" id="label_otro">Otro</label>
+    <br />
+  </body>
+</html>

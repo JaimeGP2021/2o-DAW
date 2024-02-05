@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <script src="CheckFormulario.js"></script>
+    <body>
+        <form action="mailto:Rafael.Figueroa@iesdonana.org" method="post" id="formulario">
+            <fieldset>
+                <legend>DATOS PERSONALES DE ACCESO</legend>
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" pattern="^[A-Z][a-z]+(\s[A-Z][a-z]+)?$" required><br>
+                <label for="ape">Apellido: </label>
+                <input type="text" name="ape" id="ape" pattern="^[A-Z][a-z]+(\s[A-Z][a-z]+)?$" required><br>
+                <label for="dni">DNI: </label>
+                <input type="password" name="dni" id="dni" pattern="^\d{2}\.\d{3}\.\d{3}-[A-Z]$" required><br>
+                <label for="age">Edad: </label>
+                <input type="text" name="age" id="age" pattern="^1[2-9]|([2-9]\d)$" required><br>
+                <label for="sex">Sexo:</label>
+                <select name="sex" id="sex" required>
+                    <option value="mas">Masculino</option>
+                    <option value="fem">Femenino</option>
+                    <option value="otr">Otros</option>
+                </select><br>
+                <label for="nac">Lugar de Nacimiento</label>
+                <input type="text" name="nac" id="nac" pattern="^[A-Z][a-z]+(\s\w[a-z]+)*$" required>
+            </fieldset>
+            <br>
+                <input type="submit" value="GUARDAR" id="submit">
+                <input type="button" id="ver" value="VER">
+        </form>
+    </body>
+    
+</html>
