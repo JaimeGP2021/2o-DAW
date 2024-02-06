@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<style>
+    :is(input, textarea):invalid {
+        background: red;
+    }
+
+    :is(input, textarea):valid {
+        background: green;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación Formulario</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="dni">DNI: </label>
+        <input type="text" id="dni" name="dni" placeholder="99.999.999-X" pattern="(\d{2})\.(\d{3})\.(\d{3})-([A-Z]{1})" required>
+        <br><br>
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre1 Nombre2(opc) Apellido1 Apellido2(opc)" pattern="(\w+)\ (\w+)\ ?(\w)?\ ?(\w)?" required>
+        <br><br>
+        <label for="fecha_nacimiento">Fecha de nacimiento: </label>
+        <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="dd/mm/yyyy" pattern="([0-3]{1}\d{1})\/(\d{2})\/(\d{4})" required>
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email" placeholder="xxxxxx@yyyyy.zzz" pattern="([a-z]+\d?\S)\@([a-z]+\S)\.([a-z]+\S)" required>
+        <br><br>
+        <label for="web">WEB: </label>
+        <input type="text" id="web" name="web" placeholder="http://www.xxxx.yyy" pattern="http:\/\/www\.(.+)\.(.+)" required> 
+        <br><br>
+        <label for="password">Contraseña: </label>
+        <input type="password" id="password" name="password" placeholder="De 8 a 9 caracteres" pattern=".{8,9}" required>
+    </form>
+</body>
+
+</html>
