@@ -157,7 +157,8 @@ main.contact {
 }
 
 .contact iframe {
-  width: 600px;
+  margin: 20px;
+  width: 650px;
   height: 850px;
   border: 3px solid black;
 }
@@ -167,12 +168,12 @@ main.contact {
 }
 
 .contact div {
-  text-align: justify;
-  background-color: rgba(255, 204, 204, 0.4);
   margin: 10px;
-  height: 135px;
-  width: 250px;
-  padding: 10px;
+  padding: 10px 15px;
+  background-color: rgba(255, 204, 204, 0.4);
+  height: 120px;
+  width: 230px;
+  text-align: justify;
 }
 
 .contact div.direccion{
