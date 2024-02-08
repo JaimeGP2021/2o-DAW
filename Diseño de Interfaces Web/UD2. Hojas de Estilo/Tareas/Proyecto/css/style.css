@@ -87,14 +87,29 @@ main.index {
 }
 
 .index div {
-  display: flex;
-}
-
-.index div {
+  height: 200px;
   flex-grow: 1;
   flex-basis: 0;
   margin: 20px;
   padding: 10px;
+}
+
+.uno {
+  position: absolute;
+  top: 150px;
+  left: 550px;
+}
+
+.dos {
+  position: absolute;
+  top: 150px;
+  left: 850px;
+}
+
+.tres {
+  position: absolute;
+  top: 150px;
+  left: 1050px;
 }
 
 /*Inicio about.html*/
