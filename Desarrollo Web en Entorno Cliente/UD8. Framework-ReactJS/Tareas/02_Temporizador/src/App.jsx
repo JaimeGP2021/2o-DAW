@@ -1,19 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Temporizador from './Temporizador';
+import MensajeFinal from './MensajeFinal';
 
-function App() {
+import './App.css';
+
+const App = () => {
+  const [mostrarTemporizador, setMostrarTemporizador] = useState(false);
+  const [tiempoInicial, setTiempoInicial] = useState(0);
+
+  const iniciarTemporizador = (tiempo) => {
+    setTiempoInicial(tiempo);
+    setMostrarTemporizador(true);
+  };
+
+  const reiniciarAplicacion = () => {
+    setMostrarTemporizador(false);
+  };
 
   return (
-    <>
-      <div>
-        <p>¿Cuantos segundos vas a contar?</p>
-        <input type='number'></input> 
-        <button type='submit'>iniciar</button>
-      </div>
-    </>
-  )
-}
+    <div>
+      {mostrarTemporizador ? (
+        <MensajeFinal reiniciarAplicacion={reiniciarAplicacion} />
+      ) : (
+        <div>
+          <h1>App</h1>
+          <label>
+            Introduce el tiempo en segundos:
+            <input type="number" onChange={(e) => setTiempoInicial(e.target.value)} />
+          </label>
+          <button onClick={() => iniciarTemporizador(tiempoInicial)}>Iniciar Temporizador</button>
+        </div>
+      )}
 
-export default App
+      {mostrarTemporizador && <Temporizador tiempoInicial={tiempoInicial} />}
+    </div>
+  );
+};
+
+export default App;
