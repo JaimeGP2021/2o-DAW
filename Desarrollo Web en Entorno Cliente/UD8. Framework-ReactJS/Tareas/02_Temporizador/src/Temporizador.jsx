@@ -16,7 +16,7 @@ const Temporizador = ({ tiempoInicial }) => {
   return (
     <div>
       <h1>Temporizador</h1>
-      <p>{segundos} segundos restantes</p>
+      <p>Soy un conteo hasta {tiempoInicial} y han transcurrido {segundos} segundos</p>
     </div>
   );
 };
