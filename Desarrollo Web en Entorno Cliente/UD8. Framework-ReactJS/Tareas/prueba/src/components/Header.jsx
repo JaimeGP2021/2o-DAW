@@ -1,5 +1,3 @@
-import "../style/header.css";
-
 function Header() {
   return (
     <header>
