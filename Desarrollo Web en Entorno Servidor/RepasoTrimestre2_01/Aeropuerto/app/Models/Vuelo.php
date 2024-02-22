@@ -14,8 +14,18 @@ class Vuelo extends Model
         return $this->belongsTo(Compania::class);
     }
 
-    public function aeropuerto()
+    public function aeropuerto_llegada()
     {
-        return $this->belongsTo(Aeropuerto::class);
+        return $this->belongsTo(Aeropuerto::class, 'aeropuerto_llegada_id');
+    }
+
+    public function aeropuerto_salida()
+    {
+        return $this->belongsTo(Aeropuerto::class, 'aeropuerto_salida_id');
+    }
+
+    public function billetes()
+    {
+        return $this->hasMany(Billete::class);
     }
 }
