@@ -12,7 +12,7 @@ code .
 editas .env con los datos de la bbdd
 Pruebas a conectarte con "php artisan db"
 F1 en code -> artisan make:model
-Nombre del modelo en singular y empezando en mayúscula (coomo una clase)
+Nombre del modelo en singular y empezando en mayúscula (como una clase)
 Le dices que si quieres crear el resto de cosas
 Database->migrations->editas la migarcion del modelo creado para hacer la tabla de la BBDD
 php artisan migrate
