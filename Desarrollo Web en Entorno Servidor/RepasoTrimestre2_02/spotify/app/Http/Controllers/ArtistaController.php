@@ -66,7 +66,14 @@ class ArtistaController extends Controller
      */
     public function destroy(Artista $artista)
     {
-        Artista::destroy([$artista->id]);
-        return redirect()->route("artistas.index");
+        if ($artista->canciones->count())
+        {
+            return redirect()->route("artistas.index")->with('error', 'Acción no permitida');
+        }
+        else
+        {
+            Artista::destroy([$artista->id]);
+            return redirect()->route("artistas.index");
+        }
     }
 }

@@ -100,7 +100,14 @@ class AlbumController extends Controller
      */
     public function destroy(Album $album)
     {
-        Album::destroy([$album->id]);
-        return redirect()->route("albumes.index");
+        if ($album->canciones->count())
+        {
+            return redirect()->route("albumes.index")->with('error', 'Acción no permitida');
+        }
+        else
+        {
+            Album::destroy([$album->id]);
+            return redirect()->route("albumes.index");
+        }
     }
 }

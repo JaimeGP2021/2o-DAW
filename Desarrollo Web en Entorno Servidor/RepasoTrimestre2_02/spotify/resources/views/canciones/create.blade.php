@@ -2,7 +2,7 @@
 
     @vite('resources/css/app.css')
 
-    <!--Error de inicio de sesión-->
+    <!--Error de inicio de sesión simple-->
     @if (session('error'))
         <div class="alert alert-danger">
             {{ session('error') }}
