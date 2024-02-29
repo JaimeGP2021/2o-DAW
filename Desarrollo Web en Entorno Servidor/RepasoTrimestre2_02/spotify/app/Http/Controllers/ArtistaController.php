@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreArtistaRequest;
-use App\Http\Requests\UpdateArtistaRequest;
 use App\Models\Artista;
+use Illuminate\Http\Request;
 
 class ArtistaController extends Controller
 {
@@ -13,7 +12,7 @@ class ArtistaController extends Controller
      */
     public function index()
     {
-        //
+        return view("artistas.index", ["artistas"=>Artista::all()]);
     }
 
     /**
@@ -21,15 +20,18 @@ class ArtistaController extends Controller
      */
     public function create()
     {
-        //
+        return view("artistas.create");
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreArtistaRequest $request)
+    public function store(Request $request)
     {
-        //
+        Artista::create([
+            "nombre" => $request->nombre,
+        ]);
+        return redirect()->route("artistas.index");
     }
 
     /**
@@ -45,15 +47,18 @@ class ArtistaController extends Controller
      */
     public function edit(Artista $artista)
     {
-        //
+        return view("artistas.edit", ["artista" => $artista]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateArtistaRequest $request, Artista $artista)
+    public function update(Request $request, Artista $artista)
     {
-        //
+        $artista->update([
+            "nombre" => $request->nombre,
+        ]);
+        return redirect()->route("artistas.index");
     }
 
     /**
@@ -61,6 +66,7 @@ class ArtistaController extends Controller
      */
     public function destroy(Artista $artista)
     {
-        //
+        Artista::destroy([$artista->id]);
+        return redirect()->route("artistas.index");
     }
 }
