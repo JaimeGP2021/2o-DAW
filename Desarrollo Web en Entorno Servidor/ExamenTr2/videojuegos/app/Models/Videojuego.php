@@ -9,7 +9,7 @@ class Videojuego extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["titulo", "anyo"];
+    protected $fillable = ["titulo", "anyo", "desarrolladora_id"];
 
     public function desarrolladora()
     {
