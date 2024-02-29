@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreVideojuegoRequest;
-use App\Http\Requests\UpdateVideojuegoRequest;
+use App\Models\Desarrolladora;
 use App\Models\Videojuego;
+use Illuminate\Http\Request;
 
 class VideojuegoController extends Controller
 {
@@ -13,7 +13,7 @@ class VideojuegoController extends Controller
      */
     public function index()
     {
-        //
+        return view("videojuegos.index", ["videojuegos"=>Videojuego::all()]);
     }
 
     /**
@@ -21,15 +21,20 @@ class VideojuegoController extends Controller
      */
     public function create()
     {
-        //
+        return view("videojuegos.create", ["desarrolladoras" => Desarrolladora::all()]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreVideojuegoRequest $request)
+    public function store(Request $request)
     {
-        //
+        Videojuego::create([
+            "titulo" => $request->titulo,
+            "anyo" => $request->anyo,
+            "desarrolladora_id" => $request->desarrolladora_id, //PILLA EL ID PERO NO SE LO AÑADE
+        ]);
+        return redirect()->route("videojuegos.index");
     }
 
     /**
@@ -51,7 +56,7 @@ class VideojuegoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateVideojuegoRequest $request, Videojuego $videojuego)
+    public function update(Request $request, Videojuego $videojuego)
     {
         //
     }
