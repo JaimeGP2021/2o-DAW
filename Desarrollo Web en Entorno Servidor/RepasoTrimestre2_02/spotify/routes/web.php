@@ -2,9 +2,8 @@
 
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\ArtistaController;
+use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\CancionController;
-use App\Models\Cancion;
-use GuzzleHttp\Promise\CancellationException;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('/', 'busqueda.barra')->middleware("auth");
+
+Route::get('/resultados', [BusquedaController::class, 'resultados'])->name('busqueda.resultados');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
