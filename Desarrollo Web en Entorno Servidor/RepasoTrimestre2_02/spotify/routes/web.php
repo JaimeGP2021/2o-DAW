@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\ArtistaController;
+use App\Http\Controllers\CancionController;
+use App\Models\Cancion;
+use GuzzleHttp\Promise\CancellationException;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +27,9 @@ Route::view('dashboard', 'dashboard')
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
+
+Route::resource('canciones', CancionController::class)->parameters(['canciones' => 'cancion'])->middleware('auth');
+Route::resource('albumes', AlbumController::class)->parameters(['albumes' => 'album'])->middleware('auth');
+Route::resource('artistas', ArtistaController::class)->middleware('auth');
 
 require __DIR__.'/auth.php';
