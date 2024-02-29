@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('artista_cancion', function (Blueprint $table) {
             $table->id();
             $table->foreignId('artista_id')->constrained();
-            $table->foreignId('cancion_id')->constrained('cancion');
+            $table->foreignId('cancion_id')->constrained('canciones');
             $table->timestamps();
         });
     }
