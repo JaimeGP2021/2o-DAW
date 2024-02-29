@@ -9,9 +9,9 @@ class Cancion extends Model
 {
     use HasFactory;
 
-    protected $table='canciones';
+    protected $table = 'canciones';
 
-    protected $fillable = ["nombre"];
+    protected $fillable = ["nombre", "duracion"];
 
     public function artistas()
     {
@@ -21,5 +21,20 @@ class Cancion extends Model
     public function albumes()
     {
         return $this->belongsToMany(Album::class);
+    }
+
+    public function formatear()
+    {
+        $segundos = $this->duracion;
+        if (!$segundos) {
+            return "Sin canciones";
+        }
+        $minutos = floor($segundos / 60);
+        $segundosRestantes = $segundos % 60;
+        if ($segundosRestantes) {
+            return "$minutos:$segundosRestantes";
+        } else {
+            return "$minutos:00";
+        }
     }
 }
