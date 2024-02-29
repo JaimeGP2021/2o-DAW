@@ -11,6 +11,8 @@ class Cancion extends Model
 
     protected $table='canciones';
 
+    protected $fillable = ["nombre"];
+
     public function artistas()
     {
         return $this->belongsToMany(Artista::class);
