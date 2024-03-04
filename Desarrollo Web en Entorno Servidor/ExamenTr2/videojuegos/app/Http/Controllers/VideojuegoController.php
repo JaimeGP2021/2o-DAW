@@ -13,7 +13,9 @@ class VideojuegoController extends Controller
      */
     public function index()
     {
-        return view("videojuegos.index", ["videojuegos"=>Videojuego::all()]);
+        $usuario = auth()->user();
+        $videojuegos = $usuario->videojuegos;
+        return view("videojuegos.index", ["videojuegos"=>$videojuegos]);
     }
 
     /**
@@ -72,6 +74,24 @@ class VideojuegoController extends Controller
      */
     public function destroy(Videojuego $videojuego)
     {
-        //
+        $videojuego->users()->detach();
+        $videojuego->delete();
+
+        return redirect()->route("videojuegos.index");
+    }
+
+    public function poseo()
+    {
+        return view("videojuegos.poseo", ["videojuegos"=>Videojuego::all()]);
+    }
+
+    public function poseo_funcion(Request $request)
+    {
+        if ($request->funcionalidad === "Lo tengo")
+        {
+            $request->videojuego_id->
+        }else{
+
+        }
     }
 }
