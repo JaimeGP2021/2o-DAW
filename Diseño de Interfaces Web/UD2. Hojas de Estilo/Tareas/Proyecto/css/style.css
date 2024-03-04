@@ -75,7 +75,7 @@ main.index {
 
 .index input{
   float: left;
-  margin-left: 15%;
+  margin-left: 20%;
   width: 12%;
 }
 
@@ -87,31 +87,56 @@ main.index {
 }
 
 .index div {
-  height: 200px;
+  height: 250px;
   flex-grow: 1;
   flex-basis: 0;
   margin: 20px;
   padding: 10px;
 }
 
-.uno {
-  position: absolute;
-  top: 150px;
-  left: 550px;
+.index div img{
+  height: 85px;
+  width: 85px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
 }
 
-.dos {
+.continua .uno {
   position: absolute;
-  top: 150px;
-  left: 850px;
+  top: 165px;
+  left: 700px;
 }
 
-.tres {
+.continua .dos {
   position: absolute;
-  top: 150px;
-  left: 1050px;
+  top: 165px;
+  left: 885px;
 }
 
+.continua .tres {
+  position: absolute;
+  top: 165px;
+  left: 1070px;
+}
+
+.temporada .uno {
+  position: absolute;
+  top: 550px;
+  left: 700px;
+}
+
+.temporada .dos {
+  position: absolute;
+  top: 550px;
+  left: 885px;
+}
+
+.temporada .tres {
+  position: absolute;
+  top: 550px;
+  left: 1070px;
+}
 /*Inicio about.html*/
 
 .about h2 {
@@ -229,7 +254,7 @@ main.contact {
 /*Aquí empieza el footer*/
 
 footer {
-  bottom: 0;  
+
   width: 100%;
   background-color: #ccff99;
   text-align: center;
@@ -240,9 +265,11 @@ footer {
 
 footer ul {
   align-self: center;
+  padding: 0px 15px;
 }
 
 footer li {
+  margin: 0;
   list-style: none;
 }
 
