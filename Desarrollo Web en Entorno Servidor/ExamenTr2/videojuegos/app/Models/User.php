@@ -45,6 +45,6 @@ class User extends Authenticatable
 
     public function videojuegos()
     {
-        return $this->belongsToMany(Videojuego::class);
+        return $this->belongsToMany(Videojuego::class, "posesiones");
     }
 }
