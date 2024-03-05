@@ -15,6 +15,7 @@ return new class extends Migration
             $table->foreignId('etiqueta_id');
             $table->morphs('etiquetable');
             $table->timestamps();
+            $table->primary(['etiqueta_id', 'etiquetable_type', 'etiquetable_id']);
         });
     }
 

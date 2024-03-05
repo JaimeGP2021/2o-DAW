@@ -20,4 +20,9 @@ class Videojuego extends Model
     {
         return $this->belongsToMany(User::class, "posesiones");
     }
+
+    public function etiquetas()
+    {
+        return $this->morphToMany(Etiqueta::class, "etiquetable");
+    }
 }

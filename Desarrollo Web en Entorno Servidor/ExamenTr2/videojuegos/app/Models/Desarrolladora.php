@@ -18,4 +18,9 @@ class Desarrolladora extends Model
     {
         return $this->hasMany(Videojuego::class);
     }
+
+    public function etiquetas()
+    {
+        return $this->morphToMany(Etiqueta::class, "etiquetable");
+    }
 }

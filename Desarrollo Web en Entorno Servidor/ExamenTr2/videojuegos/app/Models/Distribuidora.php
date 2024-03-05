@@ -13,4 +13,5 @@ class Distribuidora extends Model
     {
         return $this->hasMany(Desarrolladora::class);
     }
+
 }
