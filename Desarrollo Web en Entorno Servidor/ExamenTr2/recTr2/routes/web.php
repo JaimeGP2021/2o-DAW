@@ -24,6 +24,6 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Route::resource('ordenadores', OrdenadorController::class)->middleware('auth');
+Route::resource('ordenadores', OrdenadorController::class)->parameters(['ordenadores'=>'ordenador'])->middleware('auth');
 
 require __DIR__.'/auth.php';

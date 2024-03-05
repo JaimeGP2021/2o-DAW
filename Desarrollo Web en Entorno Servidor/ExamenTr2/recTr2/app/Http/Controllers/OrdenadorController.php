@@ -50,7 +50,7 @@ class OrdenadorController extends Controller
      */
     public function edit(Ordenador $ordenador)
     {
-        return view("ordenadores.create", ["ordenador" => $ordenador, "aulas" => Aula::all()]);
+        return view("ordenadores.edit", ["ordenador" => $ordenador, "aulas" => Aula::all()]);
     }
 
     /**
@@ -58,14 +58,12 @@ class OrdenadorController extends Controller
      */
     public function update(Request $request, Ordenador $ordenador)
     {
-        {
-            $ordenador->update([
-                "marca" => $request->marca,
-                "modelo" => $request->modelo,
-                "aula_id" => $request->aula_id,
-            ]);
-            return redirect()->route('ordenadores.index');
-        }
+        $ordenador->update([
+        "marca" => $request->marca,
+        "modelo" => $request->modelo,
+        "aula_id" => $request->aula_id,
+        ]);
+        return redirect()->route('ordenadores.index');
     }
 
     /**
