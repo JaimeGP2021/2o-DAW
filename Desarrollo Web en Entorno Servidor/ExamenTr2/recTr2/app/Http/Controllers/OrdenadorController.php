@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreOrdenadorRequest;
-use App\Http\Requests\UpdateOrdenadorRequest;
+use Illuminate\Http\Request;
+use App\Models\Aula;
 use App\Models\Ordenador;
 
 class OrdenadorController extends Controller
@@ -13,7 +13,7 @@ class OrdenadorController extends Controller
      */
     public function index()
     {
-        //
+        return view("ordenadores.index", ["ordenadores" => Ordenador::All()]);
     }
 
     /**
@@ -21,15 +21,20 @@ class OrdenadorController extends Controller
      */
     public function create()
     {
-        //
+        return view("ordenadores.create", ["aulas" => Aula::all()]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreOrdenadorRequest $request)
+    public function store(Request $request)
     {
-        //
+        Ordenador::create([
+            "marca" => $request->marca,
+            "modelo" => $request->modelo,
+            "aula_id" => $request->aula_id,
+        ]);
+        return redirect()->route('ordenadores.index');
     }
 
     /**
@@ -37,7 +42,7 @@ class OrdenadorController extends Controller
      */
     public function show(Ordenador $ordenador)
     {
-        //
+        return view("ordenadores.show", ["ordenador" => $ordenador]);
     }
 
     /**
@@ -45,15 +50,22 @@ class OrdenadorController extends Controller
      */
     public function edit(Ordenador $ordenador)
     {
-        //
+        return view("ordenadores.create", ["ordenador" => $ordenador, "aulas" => Aula::all()]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateOrdenadorRequest $request, Ordenador $ordenador)
+    public function update(Request $request, Ordenador $ordenador)
     {
-        //
+        {
+            $ordenador->update([
+                "marca" => $request->marca,
+                "modelo" => $request->modelo,
+                "aula_id" => $request->aula_id,
+            ]);
+            return redirect()->route('ordenadores.index');
+        }
     }
 
     /**
@@ -61,6 +73,7 @@ class OrdenadorController extends Controller
      */
     public function destroy(Ordenador $ordenador)
     {
-        //
+        $ordenador->delete();
+        return redirect()->route("ordenadores.index");
     }
 }

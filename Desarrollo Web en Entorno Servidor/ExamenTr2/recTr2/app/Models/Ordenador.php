@@ -11,9 +11,20 @@ class Ordenador extends Model
 
     protected $table = 'ordenadores';
 
+    protected $fillable = [
+        'marca',
+        'modelo',
+        'aula_id',
+    ];
+
     public function aula()
     {
         return $this->belongsTo(Aula::class);
+    }
+
+    public function colocados()
+    {
+        return $this->morphMany(Dispositivo::class, 'colocable');
     }
 
     public function cambios()

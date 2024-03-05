@@ -14,7 +14,7 @@ class Aula extends Model
         return $this->hasMany(Ordenador::class);
     }
 
-    public function colocado()
+    public function colocados()
     {
         return $this->morphMany(Dispositivo::class, 'colocable');
     }
