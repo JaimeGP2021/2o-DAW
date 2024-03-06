@@ -49,6 +49,8 @@ nav li a {
   line-height: 28px;
   padding: 18px 40px;
   color: black;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
 }
 
 nav li a:hover {
@@ -102,9 +104,12 @@ main.index {
 .index div img{
   height: 85px;
   width: 85px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.index div img:hover{
   border-style: solid;
-  border-width: 2px;
-  border-color: black;
+  border-color: #000;
 }
 
 .continua .uno {
@@ -219,6 +224,11 @@ main.detail {
   border-width: 1px;
   border-radius: 3%;
   font-size: medium;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.detail #ya:hover {
+  height: 60px;
 }
 
 /*Fin detail.html*/
