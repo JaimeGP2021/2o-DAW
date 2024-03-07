@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
+body {
+  margin: 0;
+}
+
+/*-----------------*/
+header {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: #ccff99;
+}
+
+nav img {
+  float: inline-start;
+}
+
+h1 {
+  margin-top: 16px;
+  font-family: "Source Serif 4", serif;
+  float: left;
+}
+
+nav ul {
+  float: inline-end;
+  list-style: none;
+  vertical-align: top;
+  margin-top: 16px;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline;
+  float: left;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+nav li a {
+  font-size: 22px;
+  text-decoration: none;
+  line-height: 28px;
+  padding: 18px 40px;
+  color: black;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+
+nav li a:hover {
+  background-color: #ccff33;
+}
+
+.Selected {
+  background-color: #ccff33;
+}
+
+/*Aquí acaba el header*/
+
+main {
+  text-align: center;
+  padding-top: 70px;
+}
+
+
+/*Incio index.html*/
+
+main.index {
+  padding-top: 40px;
+}
+
+.index input{
+  float: left;
+  margin-left: 20%;
+  width: 12%;
+}
+
+.index h2{
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  background-color: rgba(255, 204, 204, 0.4);
+  padding: 15px;
+}
+
+.index a{
+  text-decoration: none;
+  color: black;
+}
+
+.index div {
+  height: 250px;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 20px;
+  padding: 10px;
+}
+
+.index div img{
+  height: 85px;
+  width: 85px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.index div img:hover{
+  border-style: solid;
+  border-color: #000;
+}
+
+.continua .uno {
+  position: absolute;
+  top: 165px;
+  left: 700px;
+}
+
+.continua .dos {
+  position: absolute;
+  top: 165px;
+  left: 885px;
+}
+
+.continua .tres {
+  position: absolute;
+  top: 165px;
+  left: 1070px;
+}
+
+.temporada .uno {
+  position: absolute;
+  top: 550px;
+  left: 700px;
+}
+
+.temporada .dos {
+  position: absolute;
+  top: 550px;
+  left: 885px;
+}
+
+.temporada .tres {
+  position: absolute;
+  top: 550px;
+  left: 1070px;
+}
+/*Fin index.html*/
+
+/*Inicio detail.html*/
+main.detail {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.detail h2 {
+  font-weight: 500;
+  position: absolute;
+  top: 70px;
+  left: 1055px;
+}
+
+.detail article {
+  display: flex;
+}
+
+.detail section {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.detail img {
+  margin: 20px;
+  width: 650px;
+  height: 750px;
+  border: 3px solid black;
+}
+
+.detail div {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(255, 204, 204, 0.4);
+  height: 120px;
+  width: 230px;
+  text-align: justify;
+}
+
+.detail div.formulario {
+  position: absolute;
+  top: 12%;
+  left: 55%;
+  height: 700px;
+  width: 450px;
+  padding-left: 30px;
+}
+
+.detail form {
+  text-align: justify;
+}
+
+.detail form select {
+  width: 350px;
+}
+
+.detail form input {
+  width: 40px;
+  height: 20px;
+}
+
+.detail .boton {
+  width: 350px;
+  height: 25px;
+  background-color: #CCCCFF;
+  border-width: 0px;
+  border-radius: 3%;
+}
+
+.detail #ya {
+  width: 400px;
+  height: 30px;
+  background-color: #CCCCFF;
+  border-width: 1px;
+  border-radius: 3%;
+  font-size: medium;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.detail #ya:hover {
+  height: 60px;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*Fin detail.html*/
+
+/*Inicio about.html*/
+
+.about h2 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+}
+
+.about article {
+  display: flex;
+}
+
+.about section {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 10px;
+  padding: 10px;
+}
+
+.about div {
+  height: 175px;
+  padding-bottom: 5px;
+  background-color: rgba(255, 204, 204, 0.4);
+}
+
+.about p {
+  font-family: "Source Serif 4", serif;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.about section img {
+  margin-top: 20px;
+  border: 2px solid black;
+  width: 100%;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.about section img:hover {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+
+/*Fin about.html*/
+
+/*Inicio contact.html*/
+
+main.contact {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+.contact h2 {
+  font-weight: 500;
+}
+
+.contact article {
+  display: flex;
+}
+
+.contact section {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.contact iframe {
+  margin: 20px;
+  width: 650px;
+  height: 850px;
+  border: 3px solid black;
+}
+
+.contact li {
+  list-style: none;
+}
+
+.contact div {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(255, 204, 204, 0.4);
+  height: 120px;
+  width: 230px;
+  text-align: justify;
+}
+
+.contact div.direccion{
+  position: absolute;
+  top: 10%;
+  left: 55%;
+}
+
+.contact div.email{
+  position: absolute;
+  top: 10%;
+  left: 70%;
+}
+
+.contact div.telefono{
+  position: absolute;
+  top: 28%;
+  left: 55%;
+}
+
+.contact div.formulario {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  height: 425px;
+  width: 500px;
+}
+
+.contact form input {
+  width: 400px;
+}
+
+.contact form {
+  text-align: justify;
+}
+
+/*Aquí empieza el footer*/
+
+footer {
+
+  width: 100%;
+  background-color: #ccff99;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer ul {
+  align-self: center;
+  padding: 0px 15px;
+}
+
+footer li {
+  margin: 0;
+  list-style: none;
+}
+
+footer li a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Aquí acaba el footer*/
+
+/*Tooltip*/
+#tooltip {
+  display: inline-block;
+}
+
+#tooltip #tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #ccff99;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+#tooltip:hover #tooltiptext {
+  visibility: visible;
+}
+/*Fin tooltip*/
