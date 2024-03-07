@@ -142,6 +142,11 @@ main.index {
   top: 550px;
   left: 1070px;
 }
+
+.index audio{
+  position: fixed;
+}
+
 /*Fin index.html*/
 
 /*Inicio detail.html*/
@@ -262,9 +267,18 @@ main.detail {
   text-align: justify;
 }
 
-.about section img {
-  margin-top: 20px;
+.about section iframe {
+  margin-top: 85px;
+  margin-bottom: 150px;
   border: 2px solid black;
+  width: 100%;
+}
+
+.about section video {
+  margin-top: 85px;
+  margin-bottom: 150px;
+  border: 2px solid black;
+  background-color: black;
   width: 100%;
 }
 
