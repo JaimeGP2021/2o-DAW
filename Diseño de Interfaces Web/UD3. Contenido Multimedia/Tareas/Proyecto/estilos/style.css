@@ -266,13 +266,6 @@ main.detail {
   margin-top: 20px;
   border: 2px solid black;
   width: 100%;
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-}
-
-.about section img:hover {
--webkit-transform: scale(1.2);
-transform: scale(1.2);
 }
 
 /*Fin about.html*/
@@ -401,3 +394,9 @@ footer li a {
   visibility: visible;
 }
 /*Fin tooltip*/
+
+#cc{
+  height: 50px;
+  position: absolute;
+  left: 5px;
+}
