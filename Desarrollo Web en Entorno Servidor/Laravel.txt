@@ -1,9 +1,9 @@
-composer create-project laravel/laravel NOMBRE_PROYECTO
+composer create-project laravel/laravel:"^10" NOMBRE_PROYECTO
 te metes al directorio del proyecto
-npm install
 composer install
 composer require laravel/breeze --dev
 php artisan breeze:install
+npm install
 sudo -u postgres createuser -P NOMBRE_USUARIO_DB
 sudo -u postgres createdb -O NOMBRE_DDBB NOMBRE_USUARIO_BBDD
 npm run dev
