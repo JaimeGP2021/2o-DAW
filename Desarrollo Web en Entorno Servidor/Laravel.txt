@@ -17,4 +17,4 @@ Le dices que si quieres crear el resto de cosas
 Database->migrations->editas la migración del modelo creado para hacer la tabla de la BBDD
 php artisan migrate
 
-php artisan storage:link --> Para crear ele enlace simbolico donde se almacenarán las imágenes
+php artisan storage:link --> Para crear el enlace simbólico donde se almacenarán las imágenes
