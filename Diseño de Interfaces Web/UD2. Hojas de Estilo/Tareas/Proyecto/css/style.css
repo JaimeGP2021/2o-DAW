@@ -13,12 +13,7 @@ header {
   background-color: #ccff99;
 }
 
-nav {
-  max-width: auto;
-}
-
 nav img {
-  padding: auto;
   float: inline-start;
 }
 
@@ -49,6 +44,8 @@ nav li a {
   line-height: 28px;
   padding: 18px 40px;
   color: black;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
 }
 
 nav li a:hover {
@@ -86,6 +83,11 @@ main.index {
   padding: 15px;
 }
 
+.index a{
+  text-decoration: none;
+  color: black;
+}
+
 .index div {
   height: 250px;
   flex-grow: 1;
@@ -97,9 +99,12 @@ main.index {
 .index div img{
   height: 85px;
   width: 85px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.index div img:hover{
   border-style: solid;
-  border-width: 2px;
-  border-color: black;
+  border-color: #000;
 }
 
 .continua .uno {
@@ -137,6 +142,94 @@ main.index {
   top: 550px;
   left: 1070px;
 }
+/*Fin index.html*/
+
+/*Inicio detail.html*/
+main.detail {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.detail h2 {
+  font-weight: 500;
+  position: absolute;
+  top: 70px;
+  left: 1055px;
+}
+
+.detail article {
+  display: flex;
+}
+
+.detail section {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.detail img {
+  margin: 20px;
+  width: 650px;
+  height: 750px;
+  border: 3px solid black;
+}
+
+.detail div {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(255, 204, 204, 0.4);
+  height: 120px;
+  width: 230px;
+  text-align: justify;
+}
+
+.detail div.formulario {
+  position: absolute;
+  top: 12%;
+  left: 55%;
+  height: 700px;
+  width: 450px;
+  padding-left: 30px;
+}
+
+.detail form {
+  text-align: justify;
+}
+
+.detail form select {
+  width: 350px;
+}
+
+.detail form input {
+  width: 40px;
+  height: 20px;
+}
+
+.detail .boton {
+  width: 350px;
+  height: 25px;
+  background-color: #CCCCFF;
+  border-width: 0px;
+  border-radius: 3%;
+}
+
+.detail #ya {
+  width: 400px;
+  height: 30px;
+  background-color: #CCCCFF;
+  border-width: 1px;
+  border-radius: 3%;
+  font-size: medium;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.detail #ya:hover {
+  height: 60px;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*Fin detail.html*/
+
 /*Inicio about.html*/
 
 .about h2 {
@@ -173,6 +266,13 @@ main.index {
   margin-top: 20px;
   border: 2px solid black;
   width: 100%;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.about section img:hover {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
 }
 
 /*Fin about.html*/
@@ -279,3 +379,25 @@ footer li a {
 }
 
 /*Aquí acaba el footer*/
+
+/*Tooltip*/
+#tooltip {
+  display: inline-block;
+}
+
+#tooltip #tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #ccff99;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+#tooltip:hover #tooltiptext {
+  visibility: visible;
+}
+/*Fin tooltip*/
