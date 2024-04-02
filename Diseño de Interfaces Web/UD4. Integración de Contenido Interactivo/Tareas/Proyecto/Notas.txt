@@ -1,0 +1,7 @@
+-Combinar lightbox con pestañas para hacer un efecto tipo Amazon en el detalle del producto.
+
+-Checkear para meter como mínimo un carrusel de fotos en index presentando las flores de temporada.
+
+-Meter el acordeón en los datos de contacto para que al desplegar se muestren la dirección, email y teléfonos.
+
+-Hacer que la imagen de detlle sea la imagen responsive.
