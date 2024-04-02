@@ -4,4 +4,4 @@
 
 -Meter el acordeón en los datos de contacto para que al desplegar se muestren la dirección, email y teléfonos.
 
--Hacer que la imagen de detlle sea la imagen responsive.
+-Hacer que la imagen de detalle sea la imagen responsive.
