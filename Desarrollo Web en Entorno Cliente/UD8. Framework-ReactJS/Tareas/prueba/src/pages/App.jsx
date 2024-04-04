@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import "/src/style/style.css";
+//import "/src/style/style.css";
 
 function App() {
 
