@@ -51,7 +51,7 @@ class VideojuegoController extends Controller
      */
     public function edit(Videojuego $videojuego)
     {
-        //
+        return view('videojuegos.edit', ["videojuego" => $videojuego]);
     }
 
     /**
