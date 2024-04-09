@@ -1,0 +1,27 @@
+.acordeon{
+    width: 90%;
+    max-width: 120em;;
+    background-color: lightblue;
+    padding: 2em;
+}
+.acordeon .bloque{
+    background-color: red;
+    margin: 0 0 1em;
+    padding: 1em;
+}
+.acordeon .h2{
+    background-color: lime;
+    margin: 0 0 1em;
+    padding: 1em;
+}
+.acordeon .contenido{
+    background-color: pink;
+    padding: 0em;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease
+}
+
+.acordeon .bloque.activo .contenido{
+    height: 4em; /*Cambiar altura según el contenido*/
+}
