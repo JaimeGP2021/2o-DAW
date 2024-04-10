@@ -12,9 +12,21 @@ class VideojuegoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('videojuegos.index', ['videojuegos'=>Auth::user()->videojuegos]);
+        $order= $request->query('order', 'desarrolladoras.nombre');
+        $order_dir = $request->query('order_dir', 'asc');
+        $videojuegos = Videojuegos::with([
+            'desarrolladora',
+            'desarrolladora.distribuidora'
+        ])
+            ->selectRaw('videojuegos.*')
+
+        return view('videojuegos.index', [
+            'videojuegos'=> $videojuegos,
+            'order' => $order,
+            'order_dir' => $order_dir
+        ]);
     }
 
     /**
