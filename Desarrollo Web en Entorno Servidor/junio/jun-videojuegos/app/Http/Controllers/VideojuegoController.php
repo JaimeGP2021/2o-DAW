@@ -41,6 +41,7 @@ class VideojuegoController extends Controller
         $videojuego->anyo = $validated['anyo'];
         $videojuego->desarrolladora_id = $validated['desarrolladora_id'];
         $videojuego->save();
+        session()->flash('success', 'El videojuego se ha creado correctamente.');
         return redirect()->route("videojuegos.index");
     }
 
@@ -57,7 +58,7 @@ class VideojuegoController extends Controller
      */
     public function edit(Videojuego $videojuego)
     {
-        return view('videojuegos.edit', ["videojuego" => $videojuego, "desarrolladoras" => Desarrolladora::all()]);
+        return view('videojuegos.edit', ['videojuego' => $videojuego, 'desarrolladoras' => Desarrolladora::all()]);
     }
 
     /**
@@ -71,13 +72,10 @@ class VideojuegoController extends Controller
             'desarrolladora_id' => 'required|exists:desarrolladoras,id'
         ]);
 
-        $videojuego->update(
-            [
-                'titulo' => $validated['titulo'],
-                'anyo' => $validated['anyo'],
-                'desarrolladora_id' => $validated['desarrolladora_id']
-            ]
-        );
+        $videojuego->titulo = $validated['titulo'];
+        $videojuego->anyo = $validated['anyo'];
+        $videojuego->desarrolladora_id = $validated['desarrolladora_id'];
+        $videojuego->save();
         return redirect()->route("videojuegos.index");
     }
 

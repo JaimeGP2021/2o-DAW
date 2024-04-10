@@ -1,30 +1,51 @@
 <x-app-layout>
+    <div class="w-1/2 mx-auto">
+        <form method="POST" action="{{ route('videojuegos.update', ['videojuego' => $videojuego]) }}">
+            @csrf
+            @method('PUT')
 
-    <form action="{{ route('videojuegos.update', ['videojuego' => $videojuego]) }}" class="max-w-sm mx-auto" method="POST">
-        @csrf
-        @method('PUT')
-        <div class="mb-5">
-            <label for="titulo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Título del
-                Videojuego</label>
-            <input type="titulo" name="titulo" id="titulo" value="{{ $videojuego->titulo }}"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required />
-        </div>
-        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="anyo">Año de Salida</label>
-        <input
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            aria-describedby="anyo" name="anyo" id="anyo" type="number" value="{{$videojuego->anyo}}">
+            <!-- Título -->
+            <div>
+                <x-input-label for="titulo" :value="'Título del videojuego'" />
+                <x-text-input id="titulo" class="block mt-1 w-full" type="text" name="titulo" :value="old('titulo', $videojuego->titulo)"
+                    autofocus autocomplete="titulo" />
+                <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
+            </div>
 
-        <label for="desarrolladora_id"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Desarrolladora</label>
-        <select name="desarrolladora_id">
-            @foreach ($desarrolladoras as $desarrolladora)
-                <option value="{{ $desarrolladora->id }}"> {{ $desarrolladora->nombre }}</option>
-            @endforeach
-        </select>
+            <!-- Año -->
+            <div class="mt-4">
+                <x-input-label for="anyo" :value="'Año del videojuego'" />
+                <x-text-input id="anyo" class="block mt-1 w-full" type="text" name="anyo" :value="old('anyo', $videojuego->anyo)"
+                    autofocus autocomplete="anyo" />
+                <x-input-error :messages="$errors->get('anyo')" class="mt-2" />
+            </div>
 
-        <button type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-    </form>
+            <!-- Desarrolladora -->
+            <div class="mt-4">
+                <x-input-label for="desarrolladora_id" :value="'Desarrolladora del artículo'" />
+                <select id="desarrolladora_id"
+                    class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full"
+                    name="desarrolladora_id">
+                    @foreach ($desarrolladoras as $desarrolladora)
+                        <option value="{{ $desarrolladora->id }}"
+                            {{ old('desarrolladora_id', $videojuego->desarrolladora_id) == $desarrolladora->id ? 'selected' : '' }}>
+                            {{ $desarrolladora->nombre }}
+                        </option>
+                    @endforeach
+                </select>
+                <x-input-error :messages="$errors->get('desarrolladora_id')" class="mt-2" />
+            </div>
 
+            <div class="flex items-center justify-end mt-4">
+                <a href="{{ route('videojuegos.index') }}">
+                    <x-secondary-button class="ms-4">
+                        Volver
+                        </x-primary-button>
+                </a>
+                <x-primary-button class="ms-4">
+                    Editar
+                </x-primary-button>
+            </div>
+        </form>
+    </div>
 </x-app-layout>
