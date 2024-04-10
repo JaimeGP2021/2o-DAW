@@ -16,11 +16,14 @@ class VideojuegoController extends Controller
     {
         $order= $request->query('order', 'desarrolladoras.nombre');
         $order_dir = $request->query('order_dir', 'asc');
-        $videojuegos = Videojuegos::with([
-            'desarrolladora',
-            'desarrolladora.distribuidora'
+        $videojuegos = Auth::user()->
+            videojuegos::with([
+                'desarrolladora',
+                'desarrolladora.distribuidora'
         ])
+            ->
             ->selectRaw('videojuegos.*')
+            ->
 
         return view('videojuegos.index', [
             'videojuegos'=> $videojuegos,
