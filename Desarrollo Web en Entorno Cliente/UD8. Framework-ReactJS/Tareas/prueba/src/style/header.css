@@ -37,14 +37,14 @@ nav li a {
   line-height: 28px;
   padding: 18px 40px;
   color: black;
-  -webkit-transition: background-color 1s linear;
-  transition: background-color 1s linear;
 }
 
 nav li a:hover {
+  transition: background-color 1s linear;
+  -webkit-transition: background-color 1s linear;
   background-color: #ccff33;
 }
 
-.Selected {
+a.active {
   background-color: #ccff33;
 }

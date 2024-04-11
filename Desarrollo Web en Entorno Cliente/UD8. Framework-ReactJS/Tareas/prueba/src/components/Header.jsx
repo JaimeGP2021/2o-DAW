@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../style/header.css";
 function Header() {
   return (
@@ -10,19 +10,16 @@ function Header() {
         <h1>AZ FLOR</h1>
         <ul>
           <li>
-            <Link to="/" className="Selected"> Inicio </Link>
+            <NavLink to="/"> Inicio </NavLink>
           </li>
           <li>
-            <Link to="/Cart"> Carrito </Link>
+            <NavLink to="/Cart"> Carrito </NavLink>
           </li>
           <li>
-            <Link to="/About"> Sobre Nosotros </Link>
+            <NavLink to="/About"> Sobre Nosotros </NavLink>
           </li>
           <li>
-            <Link to="/Contact"> Contacto </Link>
-          </li>
-          <li>
-            <Link to="#">Login</Link>
+            <NavLink to="/Contact"> Contacto </NavLink>
           </li>
         </ul>
       </nav>

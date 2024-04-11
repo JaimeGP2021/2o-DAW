@@ -1,0 +1,81 @@
+/*Incio index.html*/
+main.index {
+  padding-top: 40px;
+}
+
+.index input{
+  float: left;
+  margin-left: 20%;
+  width: 12%;
+}
+
+.index h2{
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  background-color: rgba(255, 204, 204, 0.4);
+  padding: 15px;
+}
+
+.index a{
+  text-decoration: none;
+  color: black;
+}
+
+.index div {
+  height: 250px;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 20px;
+  padding: 10px;
+}
+
+.index div img{
+  height: 85px;
+  width: 85px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.index div img:hover{
+  border-style: solid;
+  border-color: #000;
+}
+
+.continua .uno {
+  position: absolute;
+  top: 165px;
+  left: 700px;
+}
+
+.continua .dos {
+  position: absolute;
+  top: 165px;
+  left: 885px;
+}
+
+.continua .tres {
+  position: absolute;
+  top: 165px;
+  left: 1070px;
+}
+
+.temporada .uno {
+  position: absolute;
+  top: 550px;
+  left: 700px;
+}
+
+.temporada .dos {
+  position: absolute;
+  top: 550px;
+  left: 885px;
+}
+
+.temporada .tres {
+  position: absolute;
+  top: 550px;
+  left: 1070px;
+}
+
+.index audio{
+  position: fixed;
+}

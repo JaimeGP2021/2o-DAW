@@ -4,59 +4,14 @@ body {
   margin: 0;
 }
 
-/*-----------------*/
-/*Aquí acaba el header*/
-
 main {
   text-align: center;
   padding-top: 70px;
 }
+/*-----------------*/
+/*Aquí acaba el header*/
 
-
-/*Incio index.html*/
-
-main.index {
-  padding-top: 40px;
-}
-
-.index input{
-  float: left;
-  margin-left: 15%;
-  width: 12%;
-}
-
-.index h2{
-  font-family: "Source Serif 4", serif;
-  font-weight: 600;
-  background-color: rgba(255, 204, 204, 0.4);
-  padding: 15px;
-}
-
-.index div {
-  height: 200px;
-  flex-grow: 1;
-  flex-basis: 0;
-  margin: 20px;
-  padding: 10px;
-}
-
-.uno {
-  position: absolute;
-  top: 150px;
-  left: 550px;
-}
-
-.dos {
-  position: absolute;
-  top: 150px;
-  left: 850px;
-}
-
-.tres {
-  position: absolute;
-  top: 150px;
-  left: 1050px;
-}
+/*
 
 /*Inicio about.html*/
 
