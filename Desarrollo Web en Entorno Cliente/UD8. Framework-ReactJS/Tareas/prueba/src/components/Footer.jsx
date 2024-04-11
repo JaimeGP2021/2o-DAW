@@ -12,7 +12,7 @@ function Footer() {
         </li>
       </ul>
       <ul>
-        <li>©2023</li>
+        <li>©2024</li>
       </ul>
       <ul className="lista_inf">
         <li>

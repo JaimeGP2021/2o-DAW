@@ -1,4 +1,5 @@
-import "../style/header.css"
+import { Link } from "react-router-dom";
+import "../style/header.css";
 function Header() {
   return (
     <header>
@@ -9,21 +10,19 @@ function Header() {
         <h1>AZ FLOR</h1>
         <ul>
           <li>
-            <a href="#" className="Selected">Inicio</a>
+            <Link to="/" className="Selected"> Inicio </Link>
           </li>
           <li>
-            <a href="#">Carrito</a>
+            <Link to="/Cart"> Carrito </Link>
           </li>
           <li>
-            <a href="#">
-              Sobre Nosotros
-            </a>
+            <Link to="/About"> Sobre Nosotros </Link>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <Link to="/Contact"> Contacto </Link>
           </li>
           <li>
-            <a href="#">Login</a>
+            <Link to="#">Login</Link>
           </li>
         </ul>
       </nav>
