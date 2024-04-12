@@ -2,6 +2,6 @@
 
 -Checkear para meter como mínimo un carrusel de fotos en index presentando las flores de temporada.
 
--Combinar lightbox con pestañas para hacer un efecto tipo Amazon en el detalle del producto.
+-Combinar lightbox con tabs para hacer un efecto tipo Amazon en el detalle del producto.
 
 -Hacer que la imagen de detalle sea la imagen responsive.
