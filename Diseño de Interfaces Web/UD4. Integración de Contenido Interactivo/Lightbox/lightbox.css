@@ -1,0 +1,13 @@
+.ul{
+    width: 80%;
+    background: lightgrey;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+.ul .li{
+    background-color: orange;
+}
+.ul .a{}
+.ul .img{}
