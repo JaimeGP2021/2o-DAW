@@ -13,8 +13,7 @@ class VideojuegoController extends Controller
 
     public function __construct()
     {
-        // $this->authorizeResource(Categoria::class, 'categoria');
-        $this->authorizeResource(Videojuego::class, 'videojuego');
+        // $this->authorizeResource(Videojuego::class, 'videojuego');
     }
 
     /**
@@ -33,7 +32,7 @@ class VideojuegoController extends Controller
             ->get();
 
         return view('videojuegos.index', [
-            'videojuegos'=> $videojuegos,
+            'videojuegos' => $videojuegos,
             'order' => $order,
             'order_dir' => $order_dir
         ]);
@@ -58,7 +57,7 @@ class VideojuegoController extends Controller
             'desarrolladora_id' => 'required|exists:desarrolladoras,id'
         ]);
 
-        $videojuego = New Videojuego();
+        $videojuego = new Videojuego();
         $videojuego->titulo = $validated['titulo'];
         $videojuego->anyo = $validated['anyo'];
         $videojuego->desarrolladora_id = $validated['desarrolladora_id'];
@@ -80,11 +79,15 @@ class VideojuegoController extends Controller
      */
     public function edit(Videojuego $videojuego)
     {
-        // if (!Gate::allows('update-videojuego', $videojuego)) {
-        //     abort(403);
-        // }
-
-        return view('videojuegos.edit', ['videojuego' => $videojuego, 'desarrolladoras' => Desarrolladora::all()]);
+        if (!Gate::allows('update-videojuego', $videojuego)) {
+            abort(403);
+        }
+        return view('videojuegos.edit', [
+            'videojuego' => $videojuego,
+            'desarrolladoras' => Desarrolladora::all(),
+            'desarrolladora_id' => $videojuego->desarrolladora->id,
+            'distribuidora_id' => $videojuego->desarrolladora->distribuidora->id,
+        ]);
     }
 
     /**
@@ -123,7 +126,7 @@ class VideojuegoController extends Controller
 
     public function poseo()
     {
-        return view("videojuegos.poseo", ["videojuegos"=>Videojuego::all()]);
+        return view("videojuegos.poseo", ["videojuegos" => Videojuego::all()]);
     }
 
     public function poseo_funcion(Request $request)
@@ -131,10 +134,9 @@ class VideojuegoController extends Controller
         $videojuego = Videojuego::find($request->videojuego_id);
         $user = auth()->user();
 
-        if ($request->funcionalidad === "Lo tengo")
-        {
+        if ($request->funcionalidad === "Lo tengo") {
             $videojuego->users()->attach($user->id);
-        }else{
+        } else {
             $videojuego->users()->detach($user->id);
         }
         return redirect()->route("videojuegos.index");

@@ -53,18 +53,18 @@ Route::post('/videojuegos/update-poseo', function (Request $request) {
         }
     }
     if ($request->collect()->has('tengo')) {
-        $existe = DB::table('posesiones')
+        $existe = DB::table('user_videojuego')
             ->where('videojuego_id', '=', $videojuego_id)
             ->where('user_id', '=', Auth::user()->id)
             ->exists();
         if (!$existe) {
-            DB::table('posesiones')->insert([
+            DB::table('user_videojuego')->insert([
                 'videojuego_id' => $videojuego_id,
                 'user_id' => Auth::user()->id,
             ]);
         }
     } else {
-        DB::table('posesiones')
+        DB::table('user_videojuego')
             ->where('videojuego_id', '=', $videojuego_id)
             ->where('user_id', '=', Auth::user()->id)
             ->delete();
