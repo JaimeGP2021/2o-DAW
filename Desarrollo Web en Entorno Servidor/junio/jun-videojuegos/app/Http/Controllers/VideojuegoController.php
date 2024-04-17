@@ -17,7 +17,6 @@ class VideojuegoController extends Controller
         $this->authorizeResource(Videojuego::class, 'videojuego');
     }
 
-
     /**
      * Display a listing of the resource.
      */
