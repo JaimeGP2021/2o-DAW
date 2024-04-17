@@ -30,8 +30,13 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('videojuegos/poseo',[VideojuegoController::class, 'poseo'])->name('videojuegos.poseo')->middleware('auth');
-Route::post('videojuegos/poseo',[VideojuegoController::class, 'poseo_funcion'])->name('videojuegos.poseo_funcion')->middleware('auth');
+//Route::get('/videojuegos/poseo',[VideojuegoController::class, 'poseo'])->name('videojuegos.poseo')->middleware('auth');
+//Route::post('/videojuegos/poseo',[VideojuegoController::class, 'poseo_funcion'])->name('videojuegos.poseo_funcion')->middleware('auth');
+
+Route::get('/videojuegos/poseo', function () {
+    return view('videojuegos.poseo', [
+        'videojuegos' => Videojuego::all()]);
+});
 
 Route::resource('videojuegos', VideojuegoController::class)->middleware('auth');
 require __DIR__.'/auth.php';
