@@ -6,24 +6,32 @@ use Illuminate\Http\Request;
 use App\Models\Videojuego;
 use App\Models\Desarrolladora;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class VideojuegoController extends Controller
 {
+
+    public function __construct()
+    {
+        // $this->authorizeResource(Categoria::class, 'categoria');
+        $this->authorizeResource(Videojuego::class, 'videojuego');
+    }
+
+
     /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
     {
-        $order= $request->query('order', 'desarrolladoras.nombre');
+        $order = $request->query('order', 'desarrolladoras.nombre');
         $order_dir = $request->query('order_dir', 'asc');
-        $videojuegos = Auth::user()->
-            videojuegos::with([
-                'desarrolladora',
-                'desarrolladora.distribuidora'
-        ])
-            ->
+        $videojuegos = Auth::user()->videojuegos()
+            ->with(['desarrolladora', 'desarrolladora.distribuidora'])
             ->selectRaw('videojuegos.*')
-            ->
+            ->leftJoin('desarrolladoras', 'videojuegos.desarrolladora_id', '=', 'desarrolladoras.id')
+            ->leftJoin('distribuidoras', 'desarrolladoras.distribuidora_id', '=', 'distribuidoras.id')
+            ->orderBy($order, $order_dir)
+            ->get();
 
         return view('videojuegos.index', [
             'videojuegos'=> $videojuegos,
@@ -73,6 +81,10 @@ class VideojuegoController extends Controller
      */
     public function edit(Videojuego $videojuego)
     {
+        // if (!Gate::allows('update-videojuego', $videojuego)) {
+        //     abort(403);
+        // }
+
         return view('videojuegos.edit', ['videojuego' => $videojuego, 'desarrolladoras' => Desarrolladora::all()]);
     }
 
@@ -81,7 +93,12 @@ class VideojuegoController extends Controller
      */
     public function update(Request $request, Videojuego $videojuego)
     {
+        // if (!Gate::allows('update-videojuego', $videojuego)) {
+        //     abort(403);
+        // }
+
         $validated = $request->validate([
+
             'titulo'            => 'required|max:255',
             'anyo'              => 'required|digits:4',
             'desarrolladora_id' => 'required|exists:desarrolladoras,id'
