@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
+import React from "react";
 import "../style/home.css";
 
 function Home() {
@@ -9,7 +8,6 @@ function Home() {
         <h2 hidden>ª</h2>
         <section>
           <h2>FLOR CORTADA DE PRODUCCIÓN CONTINUA</h2>
-          <ReactAudioPlayer loop controls src="../assets/audio01_fondo.mp3" /> ARREGLA ESTA LÍNEA
           <input
             list="floresList"
             name="floresList"
@@ -23,27 +21,25 @@ function Home() {
             <option value="Gladiolos">Paniculata</option>
             <option value="Gerberas">Gerberas</option>
           </datalist>
-          <br />
-          <br />
           <div className="continua">
             <div className="uno">
               <a href="paginas/detail.html">
-                <img src="imágenes/Flor01.jpg" alt="margaritas" />
+                <img src="/src/assets/Flor01.jpg" alt="margaritas" />
                 <p>Margaritas</p>
               </a>
-              <img src="imágenes/Flor02.jpeg" alt="gladiolos" />
+              <img src="/src/assets/Flor02.jpeg" alt="gladiolos" />
               <p>Gladiolos</p>
             </div>
             <div className="dos">
-              <img src="imágenes/Flor03.jpeg" alt="lilliums" />
+              <img src="/src/assets/Flor03.jpeg" alt="lilliums" />
               <p>Liliums</p>
-              <img src="imágenes/Flor04.jpg" alt="eucaliptos" />
+              <img src="/src/assets/Flor04.jpg" alt="eucaliptos" />
               <p>Eucaliptos</p>
             </div>
             <div className="tres">
-              <img src="imágenes/Flor05.jpg" alt="paniculatas" />
+              <img src="/src/assets/Flor05.jpg" alt="paniculatas" />
               <p>Paniculata</p>
-              <img src="imágenes/Flor06.jpeg" alt="gerberas" />
+              <img src="/src/assets/Flor06.jpeg" alt="gerberas" />
               <p>Gerberas</p>
             </div>
           </div>
@@ -52,21 +48,23 @@ function Home() {
           <h2>FLOR CORTADA DE TEMPORADA</h2>
           <div className="temporada">
             <div className="uno">
-              <img src="imágenes/Flor01.jpg" alt="margarita" />
-              <p>Margaritas</p>
-              <img src="imágenes/Flor02.jpeg" alt="margarita" />
+              <a href="paginas/detail.html">
+                <img src="/src/assets/Flor01.jpg" alt="margaritas" />
+                <p>Margaritas</p>
+              </a>
+              <img src="/src/assets/Flor02.jpeg" alt="gladiolos" />
               <p>Gladiolos</p>
             </div>
             <div className="dos">
-              <img src="imágenes/Flor03.jpeg" alt="margarita" />
-              <p>Lilium</p>
-              <img src="imágenes/Flor04.jpg" alt="margarita" />
+              <img src="/src/assets/Flor03.jpeg" alt="lilliums" />
+              <p>Liliums</p>
+              <img src="/src/assets/Flor04.jpg" alt="eucaliptos" />
               <p>Eucaliptos</p>
             </div>
             <div className="tres">
-              <img src="imágenes/Flor05.jpg" alt="margarita" />
-              <p>Gladiolos</p>
-              <img src="imágenes/Flor06.jpeg" alt="margarita" />
+              <img src="/src/assets/Flor05.jpg" alt="paniculatas" />
+              <p>Paniculata</p>
+              <img src="/src/assets/Flor06.jpeg" alt="gerberas" />
               <p>Gerberas</p>
             </div>
           </div>

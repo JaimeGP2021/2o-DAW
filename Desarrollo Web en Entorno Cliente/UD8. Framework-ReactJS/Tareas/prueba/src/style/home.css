@@ -16,25 +16,14 @@ main.index {
   padding: 15px;
 }
 
-.index a{
-  text-decoration: none;
-  color: black;
-}
-
 .index div {
   height: 250px;
   flex-grow: 1;
   flex-basis: 0;
-  margin: 20px;
+  margin-bottom: 38.5px ;
   padding: 10px;
 }
 
-.index div img{
-  height: 85px;
-  width: 85px;
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-}
 .index div img:hover{
   border-style: solid;
   border-color: #000;
@@ -42,19 +31,19 @@ main.index {
 
 .continua .uno {
   position: absolute;
-  top: 165px;
+  top: 150px;
   left: 700px;
 }
 
 .continua .dos {
   position: absolute;
-  top: 165px;
+  top: 150px;
   left: 885px;
 }
 
 .continua .tres {
   position: absolute;
-  top: 165px;
+  top: 150px;
   left: 1070px;
 }
 
@@ -76,6 +65,14 @@ main.index {
   left: 1070px;
 }
 
-.index audio{
-  position: fixed;
+.index div img{
+  height: 85px;
+  width: 85px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.index a{
+  text-decoration: none;
+  color: black;
 }

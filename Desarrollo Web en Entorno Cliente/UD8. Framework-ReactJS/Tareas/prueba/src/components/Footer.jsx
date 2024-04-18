@@ -3,6 +3,7 @@ import "../style/footer.css"
 function Footer() {
   return (
     <footer>
+      <img id="cc" src="/src/assets/creative-commons.png" alt="creative-commons" />
       <ul className="lista_sup">
         <li>
           <a href="#">Política de cookies</a>

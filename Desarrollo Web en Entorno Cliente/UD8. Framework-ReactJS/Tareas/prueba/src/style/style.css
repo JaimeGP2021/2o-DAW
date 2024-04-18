@@ -14,43 +14,6 @@ main {
 /*
 
 /*Inicio about.html*/
-
-.about h2 {
-  font-family: "Source Serif 4", serif;
-  font-weight: 600;
-}
-
-.about article {
-  display: flex;
-}
-
-.about section {
-  flex-grow: 1;
-  flex-basis: 0;
-  margin: 10px;
-  padding: 10px;
-}
-
-.about div {
-  height: 175px;
-  padding-bottom: 5px;
-  background-color: rgba(255, 204, 204, 0.4);
-}
-
-.about p {
-  font-family: "Source Serif 4", serif;
-  font-weight: 400;
-  font-size: 15px;
-  padding: 0 20px;
-  text-align: justify;
-}
-
-.about section img {
-  margin-top: 20px;
-  border: 2px solid black;
-  width: 100%;
-}
-
 /*Fin about.html*/
 
 /*Inicio contact.html*/
