@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Detail/>}/>
+          <Route path="/Detail" element={<Detail/>}/>
           <Route path="/Cart" element={<Cart />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />

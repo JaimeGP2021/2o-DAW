@@ -7,7 +7,7 @@ function Detail() {
         <h2 hidden>ª</h2>
         <section>
           <h2 hidden>ª</h2>
-          <img src="../imágenes/Flor01.jpg" alt="Margarita" />
+          <img src="/src/assets/Flor01.jpg" alt="Margarita" />
         </section>
         <section>
           <h2>MARGARITA</h2>
@@ -45,7 +45,8 @@ function Detail() {
               </select>
               <br />
               <br />
-              <audio loop controls src="../audios/audio02_flor.mp3"></audio>
+              <br />
+              <br />
               <br />
               <br />
               <p>

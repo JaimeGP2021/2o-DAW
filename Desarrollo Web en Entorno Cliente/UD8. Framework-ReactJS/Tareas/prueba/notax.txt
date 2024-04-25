@@ -1,3 +1,17 @@
--Separa y adapta el css
+X-Separa y adapta el css
 
--Mirate el router para redirigir el contenido de la página según donde clikes en el nav (link, path, router)
+X-Mirate el router para redirigir el contenido de la página según donde clikes en el nav (link, path, router)
+
+-Prepara un "inventario.json"
+
+-Carga "Detail.jsx" con los datos de "inventario.json" (fetch)
+
+-"Detail.jsx" interactivo (precios según cantidad)
+
+-Prepara un "cart.json"
+
+-Componente botón "COMPRA YA" (vuelca contenido a "cart.json")
+
+-Crea "Cart.jsx" (muestre contenido de "cart.json")
+
+-Edición en "Cart.jsx" de "cart.json"

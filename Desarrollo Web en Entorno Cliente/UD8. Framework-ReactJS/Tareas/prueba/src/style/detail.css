@@ -58,6 +58,7 @@ main.detail {
 }
 
 .detail .boton {
+  margin: 0 1vh;
   width: 350px;
   height: 25px;
   background-color: #ccccff;
@@ -72,11 +73,8 @@ main.detail {
   border-width: 1px;
   border-radius: 3%;
   font-size: medium;
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
+  transition: 0.25s linear;
 }
 .detail #ya:hover {
   height: 60px;
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
 }

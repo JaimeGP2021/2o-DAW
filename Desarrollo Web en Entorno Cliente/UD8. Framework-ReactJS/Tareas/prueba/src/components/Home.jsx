@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/home.css";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
@@ -23,10 +24,10 @@ function Home() {
           </datalist>
           <div className="continua">
             <div className="uno">
-              <a href="paginas/detail.html">
+              <NavLink to="/Detail">
                 <img src="/src/assets/Flor01.jpg" alt="margaritas" />
                 <p>Margaritas</p>
-              </a>
+              </NavLink>
               <img src="/src/assets/Flor02.jpeg" alt="gladiolos" />
               <p>Gladiolos</p>
             </div>
@@ -48,10 +49,10 @@ function Home() {
           <h2>FLOR CORTADA DE TEMPORADA</h2>
           <div className="temporada">
             <div className="uno">
-              <a href="paginas/detail.html">
+              <NavLink to="/Detail">
                 <img src="/src/assets/Flor01.jpg" alt="margaritas" />
                 <p>Margaritas</p>
-              </a>
+              </NavLink>
               <img src="/src/assets/Flor02.jpeg" alt="gladiolos" />
               <p>Gladiolos</p>
             </div>
