@@ -282,6 +282,7 @@ main.detail {
   width: 100%;
 }
 
+
 /*Fin about.html*/
 
 /*Inicio contact.html*/
@@ -316,33 +317,35 @@ main.contact {
 }
 
 .contact div {
-  margin: 10px;
+  margin: 10px 0px;
   padding: 10px 15px;
-  background-color: rgba(255, 204, 204, 0.4);
-  height: 120px;
   width: 230px;
   text-align: justify;
 }
 
 .contact div.direccion{
+  background-color: rgba(255, 204, 204, 0.4);
   position: absolute;
   top: 10%;
   left: 55%;
 }
 
 .contact div.email{
+  background-color: rgba(255, 204, 204, 0.4);
   position: absolute;
   top: 10%;
   left: 70%;
 }
 
 .contact div.telefono{
+  background-color: rgba(255, 204, 204, 0.4);
   position: absolute;
   top: 28%;
   left: 55%;
 }
 
 .contact div.formulario {
+  background-color: rgba(255, 204, 204, 0.4);
   position: absolute;
   top: 45%;
   left: 55%;
@@ -357,6 +360,35 @@ main.contact {
 .contact form {
   text-align: justify;
 }
+
+/*Inicio acordeón*/
+.acordeon{
+  width: 90%;
+  max-width: 120em;;
+  padding: 3em;
+}
+.acordeon .bloque{
+  margin: 0 0 1em;
+  padding: 1em;
+}
+.acordeon .h2{
+  margin: 0 0 1em;
+  padding: 0.25em;
+}
+.acordeon .contenido{
+  background-color: rgba(255, 204, 204, 0.4);
+  margin: 0;
+  padding: 0 0.25em;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease
+}
+.acordeon .bloque.activo .contenido{
+  height: 3em; /*Cambiar altura según el contenido*/
+}
+/*Fin acordeón*/
+
+/*Fin contact.html*/
 
 /*Aquí empieza el footer*/
 
@@ -387,30 +419,10 @@ footer li a {
 
 /*Aquí acaba el footer*/
 
-/*Tooltip*/
-#tooltip {
-  display: inline-block;
-}
-
-#tooltip #tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #ccff99;
-  color: black;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-}
-
-#tooltip:hover #tooltiptext {
-  visibility: visible;
-}
-/*Fin tooltip*/
-
+/*Inicio creative commons*/
 #cc{
   height: 50px;
   position: absolute;
   left: 5px;
 }
+/*Fin creative commons*/

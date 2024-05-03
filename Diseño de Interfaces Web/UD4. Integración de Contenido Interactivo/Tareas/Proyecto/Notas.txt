@@ -1,4 +1,4 @@
--Meter el acordeón en los datos de contacto para que al desplegar se muestren la dirección, email y teléfonos.
+X-Meter el acordeón en los datos de contacto para que al desplegar se muestren la dirección, email y teléfonos.
 
 -Meter un carrusel en index entre el header y h2 con productos en oferta o a  destacar (black friday).
 

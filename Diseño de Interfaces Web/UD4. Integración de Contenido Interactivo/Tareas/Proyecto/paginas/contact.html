@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="../estilos/style.css" />
+    <script defer src="../js/acordeon.js"></script>
     <title>AZ Flor - Todo un Mundo de Flores</title>
     <link rel="icon" type="image/x-icon" href="../imágenes/logo.svg" />
   </head>
@@ -39,20 +40,21 @@
         </section>
         <section>
           <h2 hidden>ª</h2>
-          <div class="direccion" id="tooltip">
-            <h2>DIRECCIÓN</h2>
-            Autovía E-15 A7 - Salida 601A <br />
-            30840 Alhama de Murcia
-            <span id="tooltiptext">¡Visítanos cuando quieras!</span>
-          </div>
-          <div class="email">
-            <h2>EMAIL</h2>
-            email.example@gmail.com
-          </div>
-          <div class="telefono">
-            <h2>TELÉFONO</h2>
-            123 45 67 89<br />
-            321 54 76 98
+          <div class="acordeon">
+            <div class="direccion bloque">
+              <h2 class="h2">DIRECCIÓN</h2>
+              <p class="contenido">Autovía E-15 A7 - Salida 601A <br />
+              30840 Alhama de Murcia</p>
+            </div>
+            <div class="email bloque">
+              <h2 class="h2">EMAIL</h2>
+              <p class="contenido">email.example@gmail.com</p>
+            </div>
+            <div class="telefono bloque">
+              <h2 class="h2">TELÉFONO</h2>
+              <p class="contenido">123 45 67 89<br />
+              321 54 76 98</p>
+            </div>
           </div>
           <div class="formulario">
             <h2>FORMULARIO DE CONTACTO</h2>
@@ -76,7 +78,11 @@
       </article>
     </main>
     <footer>
-      <img id="cc" src="../imágenes/creative-commons.png" alt="creative-commons">
+      <img
+        id="cc"
+        src="../imágenes/creative-commons.png"
+        alt="creative-commons"
+      />
       <ul class="lista_sup">
         <li><a href="#">Política de cookies</a></li>
         <li><a href="#">Términos y condiciones</a></li>
