@@ -73,6 +73,7 @@ main.index {
 .index input{
   float: left;
   margin-left: 20%;
+  margin-right: 0%;
   width: 12%;
 }
 
@@ -109,43 +110,101 @@ main.index {
 
 .continua .uno {
   position: absolute;
-  top: 165px;
+  top: 535px;
   left: 700px;
 }
 
 .continua .dos {
   position: absolute;
-  top: 165px;
+  top: 535px;
   left: 885px;
 }
 
 .continua .tres {
   position: absolute;
-  top: 165px;
+  top: 535px;
   left: 1070px;
 }
 
 .temporada .uno {
   position: absolute;
-  top: 550px;
+  top: 945px;
   left: 700px;
 }
 
 .temporada .dos {
   position: absolute;
-  top: 550px;
+  top: 945px;
   left: 885px;
 }
 
 .temporada .tres {
   position: absolute;
-  top: 550px;
+  top: 945px;
   left: 1070px;
 }
 
 .index audio{
   position: fixed;
+  left: 80%
 }
+
+/*Inicio carrusel*/
+div.carrousel{
+  margin: auto;
+  padding: 0%;
+  height: auto;
+  width: 25%;
+  max-width: 120em;
+  background-color: rgba(255, 204, 204, 0.4);
+  overflow-x: hidden;
+}
+.carrousel .grande{
+  margin: 0;
+  padding: 0;
+  width: 300%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+.carrousel .img{
+  width: calc(100% / 3);
+  height: 30vh;
+  min-height: 10vh;
+}
+.carrousel .img:hover{
+  border: none;
+}
+.carrousel .puntos{
+  list-style: none;
+  width: 100%;
+  padding: .4em;
+  margin: 0;
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.carrousel .punto{
+  border: solid black 1px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: white;
+  margin: 1em 0.25em 0;
+}
+
+.carrousel .punto.activo{
+  background-color: #CCCCFF;
+
+}
+/*Fin carrusel*/
 
 /*Fin index.html*/
 

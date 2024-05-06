@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="estilos/style.css" />
+    <script defer src="js/carrusel.js"></script>
     <title>AZ Flor - Todo un Mundo de Flores</title>
     <link rel="icon" type="image/x-icon" href="imágenes/logo.svg" />
   </head>
@@ -27,10 +28,23 @@
     </header>
     <main class="index">
       <article>
-        <h2 hidden>ª</h2>
+        <h2>ÚLTIMAS OFERTAS</h2>
+        <audio loop controls src="audios/audio01_fondo.mp3"></audio>
+        <div class="carrousel">
+          <div class="grande">
+            <img src="imágenes/Flor01.jpg" alt="margaritas" class="img">
+            <img src="imágenes/Flor02.jpeg" alt="gladiolos" class="img">
+            <img src="imágenes/Flor03.jpeg" alt="lilliums" class="img">
+          </div>
+    
+          <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+          </ul>
+        </div>
         <section>
           <h2>FLOR CORTADA DE PRODUCCIÓN CONTINUA</h2>
-          <audio loop controls src="audios/audio01_fondo.mp3"></audio>
           <input
             list="floresList"
             name="floresList"
