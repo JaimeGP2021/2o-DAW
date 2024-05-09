@@ -355,6 +355,10 @@ main.contact {
   font-weight: 500;
 }
 
+.contact h2:hover {
+cursor: pointer;
+}
+
 .contact article {
   display: flex;
 }
