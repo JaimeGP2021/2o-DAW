@@ -231,22 +231,20 @@ main.detail {
 }
 
 .detail img {
-  margin: 20px;
-  width: 650px;
-  height: 750px;
+  margin: 0px 25%;
+  width: 500px;
+  height: 600px;
   border: 3px solid black;
 }
 
 .detail div {
   margin: 10px;
   padding: 10px 15px;
-  background-color: rgba(255, 204, 204, 0.4);
-  height: 120px;
-  width: 230px;
-  text-align: justify;
 }
 
 .detail div.formulario {
+  text-align: justify;
+  background-color: rgba(255, 204, 204, 0.4);
   position: absolute;
   top: 12%;
   left: 55%;
@@ -291,6 +289,54 @@ main.detail {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+/*Inicio tabs*/
+.contenedor .ul{
+  width: 100%;
+  margin: 0;
+  padding-left: 25%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  list-style: none;
+}
+.contenedor .li{
+  padding: 0.5vh;
+  margin: 0;
+  transition: all .5s ease;
+}
+
+.contenedor .li img{
+  width: 5vh;
+  height: 5vh;
+  margin: 0;
+  border: 0
+}
+.contenedor .li.activo{
+  background-color: #CCCCFF;
+}
+
+.contenedor .li.activo img{
+  border: 1 solid black;
+}
+
+.contenedor .subcontenedor{
+  margin: 0;
+  padding: 0;
+  min-height: 75vh;
+  position: relative;
+}
+.contenedor .bloque{
+  position: absolute;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.contenedor .bloque.activo{
+  opacity: 1;
+}
+/*Fin tabs*/
 
 /*Fin detail.html*/
 
