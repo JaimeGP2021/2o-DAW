@@ -10,7 +10,7 @@ const punto     =document.querySelectorAll('.punto')
 punto.forEach( (cadaPunto, i)=> {
     punto [i].addEventListener('click', ()=>{
         let posicion = i
-        let operacion = posicion * (-(100/3)) //100% entre el número de imágenes
+        let operacion = posicion * (-(100/4)) //100% entre el número de imágenes
 
         grande.style.transform = `translateX(${ operacion }% )`
 

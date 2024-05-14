@@ -162,7 +162,7 @@ div.carrousel{
 .carrousel .grande{
   margin: 0;
   padding: 0;
-  width: 300%;
+  width: 400%;
 
   display: flex;
   flex-flow: row nowrap;
@@ -173,7 +173,7 @@ div.carrousel{
   transform: translateX(0%);
 }
 .carrousel .img{
-  width: calc(100% / 3);
+  width: calc(100% / 4);
   height: 30vh;
   min-height: 10vh;
 }
