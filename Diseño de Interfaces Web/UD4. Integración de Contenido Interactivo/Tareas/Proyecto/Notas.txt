@@ -2,6 +2,6 @@ X-Meter el acordeón en los datos de contacto para que al desplegar se muestren 
 
 X-Meter un carrusel en index entre el header y h2 con productos en oferta o a destacar (black friday).
 
--Combinar lightbox con tabs para hacer un efecto tipo Amazon en el detalle del producto.
+X-Combinar lightbox con tabs para hacer un efecto tipo Amazon en el detalle del producto.
 
 -Hacer que la imagen de detalle sea la imagen responsive.
