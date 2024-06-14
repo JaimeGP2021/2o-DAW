@@ -237,6 +237,20 @@ main.detail {
   border: 3px solid black;
 }
 
+@media (width <= 1415px) or (height <= 810px) {
+  .detail img {
+    width: 375px;
+    height: 450px;
+  }
+}
+
+@media (width <= 910px) or (height <= 540px) {
+  .detail img {
+    width: 250px;
+    height: 300px;
+  }
+}
+
 .detail div {
   margin: 10px;
   padding: 10px 15px;

@@ -4,4 +4,4 @@ X-Meter un carrusel en index entre el header y h2 con productos en oferta o a de
 
 X-Combinar lightbox con tabs para hacer un efecto tipo Amazon en el detalle del producto.
 
--Hacer que la imagen de detalle sea la imagen responsive.
+X-Hacer que la imagen de detalle sea la imagen responsive.
