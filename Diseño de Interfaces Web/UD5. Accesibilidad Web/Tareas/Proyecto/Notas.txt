@@ -1,15 +1,37 @@
--Color
+-Color: 
+    Constrast checker de:
+        --Negro en verde
+        --Negro en lila
+        --Negro en rosa pastel
+        --Negro en rosa pastel oscuro (acordeón)
 
--Contenido
+-Contenido: 
+    Texto:
+        --Valor de px a rem
+        --Espaciados entre líneas, parrafos, letras y palabras
+        --Tope de 75 carácteres en textos largos (Creo que no hay)
+    
+    Enlaces:
+        --Línea que los resalte
 
--Encabezados
+-Encabezados:
+    Decir que cumplo los requisitos
 
--Estructura
+-Estructura:
+    Decir que cumplo los requisitos
 
--Formularios
+-Formularios:
+    Recorrerlo usando el tabulador
+    Unir "for" con "id" en los labels
+    Tener placeholders
 
--Imágenes
+-Imágenes:
+    Contienen alt
+    Optimizadas para ancho de banda
 
--Multimedia
+-Multimedia:
+    Quitar reproducción atomática
 
--Navegación
+-Navegación:
+    Marcar con elementos WAI-ARIA la zona de la página en la que te encuentras 
+    Acordeón por teclado(?)
