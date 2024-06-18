@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productos', function (Blueprint $table) {
+        Schema::create('lineas', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo')->unique();
-            $table->text('denominacion');
-            $table->decimal('precio', 6, 2);
+            $table->foreignId('producto_id')->constrained();
+            $table->foreignId('ticket_id')->constrained();
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('productos');
+        Schema::dropIfExists('lineas');
     }
 };
