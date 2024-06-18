@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('/', 'cajaAmiga.empezar');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
