@@ -1,25 +1,41 @@
 {
-    "flores" : {
-        "margarita": [
-            {
-                "variante":{
-                "variante":,
-                "precio":
-            },
-                "precio":
-            },
-            {
-                "variante":,
-                "precio":
-            },
-            {
-                "variante":,
-                "precio":
-            }
-            {
-                "variante":,
-                "precio":
-            }
-        ]
-    }
+    "flores":
+    [
+        {
+            "nombre": "Margarita",
+            "precio": "25€",
+            "imagen": "Flor01.jpg",
+            "cantidad":1
+        },
+        {
+            "nombre": "Gladiolos",
+            "precio": "30€",
+            "imagen": "Flor02.jpeg",
+            "cantidad":1
+        },
+        {
+            "nombre": "Liliums",
+            "precio": "40€",
+            "imagen": "Flor03.jpeg",
+            "cantidad":1
+        },
+        {
+            "nombre": "Eucalipto",
+            "precio": "50€",
+            "imagen": "Flor04.jpg",
+            "cantidad":1
+        },
+        {
+            "nombre": "Paniculata",
+            "precio": "20€",
+            "imagen": "Flor05.jpg",
+            "cantidad": 1
+        },
+        {
+            "nombre": "Gerberas",
+            "precio": "35€",
+            "imagen": "Flor06.jpeg",
+            "cantidad": 1
+        }
+    ]
 }

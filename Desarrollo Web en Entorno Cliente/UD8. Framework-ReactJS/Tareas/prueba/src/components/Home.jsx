@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/home.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -24,24 +24,34 @@ function Home() {
           </datalist>
           <div className="continua">
             <div className="uno">
-              <NavLink to="/Detail">
+              <Link to="/Detail?productoId=0">
                 <img src="/src/assets/Flor01.jpg" alt="margaritas" />
                 <p>Margaritas</p>
-              </NavLink>
-              <img src="/src/assets/Flor02.jpeg" alt="gladiolos" />
-              <p>Gladiolos</p>
+              </Link>
+              <Link to="/Detail?productoId=1">
+                <img src="/src/assets/Flor02.jpeg" alt="gladiolos" />
+                <p>Gladiolos</p>
+              </Link>
             </div>
             <div className="dos">
-              <img src="/src/assets/Flor03.jpeg" alt="lilliums" />
-              <p>Liliums</p>
-              <img src="/src/assets/Flor04.jpg" alt="eucaliptos" />
-              <p>Eucaliptos</p>
+              <Link to="/Detail?productoId=2">
+                <img src="/src/assets/Flor03.jpeg" alt="lilliums" />
+                <p>Liliums</p>
+              </Link>
+              <Link to="/Detail?productoId=3">
+                <img src="/src/assets/Flor04.jpg" alt="eucaliptos" />
+                <p>Eucaliptos</p>
+              </Link>
             </div>
             <div className="tres">
-              <img src="/src/assets/Flor05.jpg" alt="paniculatas" />
-              <p>Paniculata</p>
-              <img src="/src/assets/Flor06.jpeg" alt="gerberas" />
-              <p>Gerberas</p>
+              <Link to="/Detail?productoId=4">
+                <img src="/src/assets/Flor05.jpg" alt="paniculatas" />
+                <p>Paniculata</p>
+              </Link>
+              <Link to="/Detail?productoId=5">
+                <img src="/src/assets/Flor06.jpeg" alt="gerberas" />
+                <p>Gerberas</p>
+              </Link>
             </div>
           </div>
         </section>
@@ -49,10 +59,8 @@ function Home() {
           <h2>FLOR CORTADA DE TEMPORADA</h2>
           <div className="temporada">
             <div className="uno">
-              <NavLink to="/Detail">
-                <img src="/src/assets/Flor01.jpg" alt="margaritas" />
-                <p>Margaritas</p>
-              </NavLink>
+              <img src="/src/assets/Flor01.jpg" alt="margaritas" />
+              <p>Margaritas</p>
               <img src="/src/assets/Flor02.jpeg" alt="gladiolos" />
               <p>Gladiolos</p>
             </div>

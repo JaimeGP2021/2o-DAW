@@ -1,78 +1,56 @@
 import "../style/detail.css";
+import inventario from "../json/inventario.json"
+import queryString from 'query-string';
+import Button from "../components/Button"
 
 function Detail() {
+  const urlCadena = queryString.parse(window.location.search);
+  const idProducto = urlCadena.productoId;
+  function addProduct() {
+    fetch('http://127.0.0.1:8000/src/json/carrito.php?id_producto=' + idProducto) 
+    .then(response => {
+      if (response.ok) {
+        window.alert("Producto añadido al carrito")
+      }
+    })
+  }
+
   return (
     <main className="detail">
       <article>
         <h2 hidden>ª</h2>
         <section>
           <h2 hidden>ª</h2>
-          <img src="/src/assets/Flor01.jpg" alt="Margarita" />
+          <img src={"/src/assets/" + inventario.flores[idProducto].imagen } alt="Margarita" />
         </section>
         <section>
-          <h2>MARGARITA</h2>
+          <h2>{inventario.flores[idProducto].nombre}</h2>
           <div className="formulario">
             <form>
-              <br />
-              <label for="variante">Variante</label>
-              <br />
-              <select id="variante">
-                <option value="occidental">Occidental</option>
-                <option value="asiatica">Asíatica</option>
-                <option value="holandesa">Holandesa</option>
-                <option value="meridional">Meridional</option>
-              </select>
-              <br />
-              <br />
-              <label for="color">Color</label>
-              <br />
-              <select id="color">
-                <option value="rosa">Rosa</option>
-                <option value="blanca">Blanca</option>
-                <option value="roja">Roja</option>
-                <option value="verde">Verde</option>
-                <option value="biccolor">Bicolor</option>
-              </select>
-              <br />
-              <br />
-              <label for="nombre">Nombre</label>
-              <br />
-              <select id="nombre">
-                <option value="estandar">Escarlata</option>
-                <option value="asiatica">Lophophora</option>
-                <option value="holandesa">Sativa</option>
-                <option value="meridional">Erythroxylum</option>
-              </select>
-              <br />
-              <br />
-              <br />
-              <br />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur quis auctor eros. Nulla congue neque et eros
+                fringilla, ultrices feugiat nunc ullamcorper. Sed sodales
+                ultrices erat, non volutpat ipsum venenatis at. Etiam aliquet
+                tempus luctus. Curabitur eget tortor eu sem vehicula luctus non
+                vitae ligula. Fusce quis sagittis nibh. Maecenas fermentum
+                cursus lacus eu luctus. Proin tempor sapien eu vulputate
+                fermentum. Vivamus mollis condimentum viverra. Vivamus at rutrum
+                nibh. Etiam sodales sem non sem tempor cursus sed et mi. Nunc
+                rutrum elit consectetur pharetra porta. Donec aliquam fringilla
+                feugiat. Pellentesque dictum ipsum at neque porta convallis. In
+                hac habitasse platea dictumst.
+              </p>
               <br />
               <br />
               <p>
-                Precio Paquete: <strong>2.50€</strong>
+                Precio Caja: <strong>{inventario.flores[idProducto].precio}</strong>
               </p>
-              <input type="number" min="0" placeholder="0" />
-              <button className="boton">
-                <strong>Añadir paquetes al carrito</strong>
-              </button>{" "}
-              <br />
-              <p>
-                Precio Caja: <strong>75€</strong>
-              </p>
-              <input type="number" min="0" placeholder="0" />
-              <button className="boton">
-                <strong>Añadir cajas al carrito</strong>
-              </button>
+              <Button accion="Añadir al carrito" 
+              click={addProduct} />
               <br />
               <br />
               <br />
-              <p className="precio">
-                <strong>PRECIO TOTAL: 150€</strong>
-              </p>
-              <button id="ya">
-                <strong>COMPRAR YA</strong>
-              </button>
             </form>
           </div>
         </section>
