@@ -6,6 +6,7 @@
     <meta name="description" content="" />
     <link rel="stylesheet" href="../estilos/style.css" />
     <script defer src="../js/tabs.js"></script>
+    <script defer src="../js/lightbox.js"></script>
     <title>AZ Flor - Todo un Mundo de Flores</title>
     <link rel="icon" type="image/x-icon" href="../imágenes/logo.svg" />
   </head>
@@ -31,20 +32,24 @@
         <h2 hidden>ª</h2>
         <section>
           <h2 hidden>ª</h2>
-
           <div class="contenedor">
             <div class="subcontenedor">
-              <div class="bloque activo"><img src="../imágenes/Flor01.jpg" alt="Margarita_miniatura01"></div>
-              <div class="bloque"><img src="../imágenes/Flor06.jpeg" alt="Margarita_miniatura02"></div>
-              <div class="bloque"><img src="../imágenes/Flor07.jpg" alt="Margarita_miniatura03"></div>
+                <div class="bloque activo"><img src="../imágenes/Flor01.jpg" class="img" alt="Margarita_miniatura01"></div>
+                <div class="bloque"><img src="../imágenes/Flor06.jpeg" class="img" alt="Margarita_miniatura02"></div>
+                <div class="bloque"><img src="../imágenes/Flor07.jpg" class="img" alt="Margarita_miniatura03"></div>
             </div>
-
+        
+            <div class="lightbox">
+                <button class="cerrar">Cerrar</button>
+                <img src="" alt="Imagen grande" class="grande" loading="lazy">
+            </div>
+        
             <ul class="ul">
-              <li class="li activo"><img src="../imágenes/Flor01.jpg" alt="01"></li>
-              <li class="li"><img src="../imágenes/Flor06.jpeg" alt="02"></li>
-              <li class="li"><img src="../imágenes/Flor07.jpg" alt="03"></li>
+                <li class="li activo"><a href="#" class="a" title="Imagen 1"><img class="img" src="../imágenes/Flor01.jpg" alt="01"></a></li>
+                <li class="li"><a href="#" class="a" title="Imagen 2"><img class="img" src="../imágenes/Flor06.jpeg" alt="02"></a></li>
+                <li class="li"><a href="#" class="a" title="Imagen 3"><img class="img" src="../imágenes/Flor07.jpg" alt="03"></a></li>
             </ul>
-          </div>
+        </div>
 
         </section>
         <section>
