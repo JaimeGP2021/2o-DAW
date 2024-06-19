@@ -1,4 +1,4 @@
-import '../style/style.css'
+import '../style/linea.css'
 
 
 function Producto(props) {
@@ -45,7 +45,7 @@ function Producto(props) {
 				</p>
 				</div>
 				<div id="precioDiv">
-				<p id="precio1">Precio</p> 
+				<p id="precio1">Precio/paquete</p> 
 				<p id="precio2">{props.precio}</p>
 				</div>
 			</div>

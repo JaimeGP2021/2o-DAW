@@ -4,6 +4,7 @@
 import Linea from "./Linea"
 import carritoJson from "../json/cart.json"
 import Button from "../components/Button"
+import "../style/cart.css"
 
 
 function Cart() {
@@ -48,8 +49,7 @@ function Cart() {
       });
   };
   return (
-    <main style={{ minHeight: '100vh' }}>
-      <h1>Carrito</h1> <br />
+    <main style={{ minHeight: '100vh', paddingTop:'10vh'}}>
       {carritoJson.cart.length === 0 ? (
         <h2>No hay productos en el carrito</h2>
       ) : (
@@ -71,7 +71,7 @@ function Cart() {
             TOTAL: {total.toFixed(2)}€
           </p>
           <Button accion="Comprar" id="button" click={comprar}/>
-          <Button accion="vaciar carrito" id="borrar" click={vaciar}/>
+          <Button accion="Vaciar Carrito" id="borrar" click={vaciar}/>
         </>
       )}
     </main>

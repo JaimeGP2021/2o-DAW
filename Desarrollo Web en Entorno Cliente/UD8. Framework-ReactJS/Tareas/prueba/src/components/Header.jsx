@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "../style/header.css";
+import cart from "../json/cart.json"
+
 function Header() {
+  const totalCantidades = cart.cart.reduce((total, producto) => total + producto.cantidad, 0);
   return (
     <header>
       <nav>
@@ -13,7 +16,7 @@ function Header() {
             <NavLink to="/"> Inicio </NavLink>
           </li>
           <li>
-            <NavLink to="/Cart"> Carrito </NavLink>
+            <NavLink to="/Cart"> Carrito{totalCantidades>0?'('+totalCantidades+')':''} </NavLink>
           </li>
           <li>
             <NavLink to="/About"> Sobre Nosotros </NavLink>
