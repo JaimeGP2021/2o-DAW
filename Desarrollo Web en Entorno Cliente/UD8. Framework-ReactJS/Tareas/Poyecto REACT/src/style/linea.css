@@ -1,0 +1,78 @@
+.producto {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 20px;
+  background-color: #f9f9f9;
+  align-items: center;
+}
+
+.producto img {
+  max-width: 100px;
+  margin-right: 16px;
+  border-radius: 8px;
+}
+
+.producto div {
+  flex-grow: 1;
+}
+
+.productoT {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  width: 500px;
+}
+
+.productoD {
+  font-size: 1em;
+  margin: 8px 0;
+  color: #666;
+}
+
+.productoInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cantidadDiv,
+#precioDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cantidad1,
+#precio1 {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+#cantidad2,
+#precio2 {
+  font-size: 1.2em;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+#cantidad2 button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 0 8px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 30px;
+}
+
+#cantidad2 button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,13 @@
+.boton {
+  margin: 0 1vh;
+  width: 350px;
+  height: 40px;
+  background-color: #ccccff;
+  border-width: 0px;
+  border-radius: 3%;
+  font-size: large;
+}
+
+#total {
+  font-size: xx-large;
+}

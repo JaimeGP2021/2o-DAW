@@ -1,0 +1,29 @@
+import "../style/footer.css"
+
+function Footer() {
+  return (
+    <footer>
+      <img id="cc" src="/src/assets/creative-commons.png" alt="creative-commons" />
+      <ul className="lista_sup">
+        <li>
+          <a href="#">Política de cookies</a>
+        </li>
+        <li>
+          <a href="#">Términos y condiciones</a>
+        </li>
+      </ul>
+      <ul>
+        <li>©2024</li>
+      </ul>
+      <ul className="lista_inf">
+        <li>
+          <a href="#">Aviso legal</a>
+        </li>
+        <li>
+          <a href="#">Política de privacidad</a>
+        </li>
+      </ul>
+    </footer>
+  );
+}
+export default Footer;

@@ -1,0 +1,91 @@
+main.contact {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+.contact h2 {
+  font-weight: 500;
+}
+
+.contact article {
+  display: flex;
+}
+
+.contact section {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.contact iframe {
+  margin: 20px;
+  width: 650px;
+  height: 850px;
+  border: 3px solid black;
+}
+
+.contact li {
+  list-style: none;
+}
+
+.contact div {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(255, 204, 204, 0.4);
+  height: 120px;
+  width: 230px;
+  text-align: justify;
+}
+
+.contact div.direccion {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+}
+
+.contact div.email {
+  position: absolute;
+  top: 10%;
+  left: 70%;
+}
+
+.contact div.telefono {
+  position: absolute;
+  top: 28%;
+  left: 55%;
+}
+
+.contact div.formulario {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  height: 425px;
+  width: 500px;
+}
+
+.contact form input {
+  width: 400px;
+}
+
+.contact form {
+  text-align: justify;
+}
+
+#tooltip {
+  display: inline-block;
+}
+
+#tooltip #tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #ccff99;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+#tooltip:hover #tooltiptext {
+  visibility: visible;
+}
